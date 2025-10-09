@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/351912847526", "_blank");
+    const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
+    const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -40,13 +42,23 @@ const Contact = () => {
                 <div className="w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-salvia" />
                 </div>
-                <div>
-                  <h3 className="font-medium text-grafite mb-1">Telefone</h3>
-                  <p className="text-grafite/70">
-                    +351 21 586 2245<br />
-                    WhatsApp: +351 912 847 526
-                  </p>
-                </div>
+              <div>
+                <h3 className="font-medium text-grafite mb-1">Telefone</h3>
+                <p className="text-grafite/70">
+                  <a href="tel:+351215862245" className="hover:text-salvia transition-colors">
+                    +351 21 586 2245
+                  </a>
+                  <br />
+                  WhatsApp: <a 
+                    href={`https://wa.me/351912847526?text=${encodeURIComponent("Olá! Vim através do site e gostaria de agendar uma sessão.")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-salvia transition-colors"
+                  >
+                    +351 912 847 526
+                  </a>
+                </p>
+              </div>
               </div>
 
               <div className="flex gap-4 items-start">

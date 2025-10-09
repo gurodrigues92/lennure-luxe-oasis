@@ -6,6 +6,7 @@ import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
 import Philosophy from "@/components/Philosophy";
 import Contact from "@/components/Contact";
+import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <Testimonials />
       <Philosophy />
       <Contact />
+      <MapLocation />
       <Footer />
       <FloatingWhatsApp />
     </div>
