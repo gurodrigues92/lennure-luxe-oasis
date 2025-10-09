@@ -12,31 +12,28 @@ const Philosophy = () => {
 
   return (
     <section className="py-24 bg-salvia/10">
+      {/* Marquee full-width - sem bordas laterais */}
+      <div className="overflow-hidden w-full mb-16">
+        <div className="flex animate-marquee gap-8 whitespace-nowrap">
+          {/* Renderizar 4 cópias para cobertura total em telas grandes */}
+          {[...Array(4)].map((_, copyIndex) => (
+            <React.Fragment key={`copy-${copyIndex}`}>
+              {values.map((value, index) => (
+                <React.Fragment key={`${copyIndex}-${index}`}>
+                  <span className="text-2xl md:text-4xl font-cormorant text-grafite font-light">
+                    {value}
+                  </span>
+                  <span className="text-dourado text-2xl md:text-4xl">·</span>
+                </React.Fragment>
+              ))}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+
+      {/* Container centralizado para quote e texto */}
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
-          {/* Values - Marquee Infinito */}
-          <div className="overflow-hidden w-full mb-8">
-            <div className="flex animate-marquee gap-8 whitespace-nowrap">
-              {/* Primeira cópia */}
-              {values.map((value, index) => (
-                <React.Fragment key={`first-${index}`}>
-                  <span className="text-2xl md:text-4xl font-cormorant text-grafite font-light">
-                    {value}
-                  </span>
-                  <span className="text-dourado text-2xl md:text-4xl">·</span>
-                </React.Fragment>
-              ))}
-              {/* Segunda cópia para loop perfeito */}
-              {values.map((value, index) => (
-                <React.Fragment key={`second-${index}`}>
-                  <span className="text-2xl md:text-4xl font-cormorant text-grafite font-light">
-                    {value}
-                  </span>
-                  <span className="text-dourado text-2xl md:text-4xl">·</span>
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
 
           {/* Quote */}
           <div className="animate-fade-in-up space-y-6">
