@@ -17,13 +17,18 @@ const therapists = [
     languages: "PT / EN"
   },
   {
-    name: "Thais",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032334/Thais_Capa_puggyx.png",
+    name: "Miguel",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032333/Imagem_de_iLoveIMG_2_edikvx.png",
     languages: "PT / EN"
   },
   {
-    name: "Yasmin",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032346/yasmin-capa_edited_pyqebw.jpg",
+    name: "André",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032333/Imagem_iLoveIMG_oqyabe.png",
+    languages: "PT / EN"
+  },
+  {
+    name: "Ricardo",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032334/Imagem_de_iLoveIMG_1_ij9ai9.png",
     languages: "PT / EN"
   }
 ];
@@ -36,15 +41,15 @@ const Therapists = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-light text-grafite mb-4">
-              Nossas Terapeutas
+              Nossa Equipa de Terapeutas
             </h2>
             <p className="text-lg text-grafite/70 max-w-2xl mx-auto">
-              Profissionais qualificadas e dedicadas ao seu bem-estar
+              Profissionais qualificados e dedicados ao seu bem-estar
             </p>
           </div>
 
           {/* Therapists Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
             {therapists.map((therapist, index) => (
               <div 
                 key={index}
@@ -75,13 +80,22 @@ const Therapists = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => window.open("https://wa.me/351912847526", "_blank")}
+              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-femininas", "_blank")}
+              className="min-w-[200px]"
             >
-              Conhecer mais sobre as terapeutas
+              Ver Terapeutas Femininas
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-masculinos", "_blank")}
+              className="min-w-[200px]"
+            >
+              Ver Terapeutas Masculinos
             </Button>
           </div>
         </div>
