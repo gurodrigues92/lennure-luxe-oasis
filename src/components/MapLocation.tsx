@@ -1,4 +1,5 @@
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const MapLocation = () => {
   const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
@@ -54,7 +55,7 @@ const MapLocation = () => {
               aria-label="Enviar mensagem via WhatsApp"
             >
               <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
-                <MessageCircle className="w-7 h-7 text-salvia" />
+                <WhatsAppIcon size={28} className="text-salvia" />
               </div>
               <h3 className="font-medium text-grafite text-center">WhatsApp</h3>
               <p className="text-grafite/70 text-center text-sm group-hover:text-salvia transition-colors">

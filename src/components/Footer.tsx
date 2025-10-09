@@ -1,11 +1,11 @@
-import { Instagram } from "lucide-react";
+// Instagram removed - account doesn't exist
 
 const Footer = () => {
   return (
     <footer className="bg-grafite text-white py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Logo & Description */}
             <div className="space-y-4">
               <img 
@@ -38,20 +38,6 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
-
-            {/* Social */}
-            <div>
-              <h3 className="font-cormorant text-lg mb-4">Siga-nos</h3>
-              <a 
-                href="https://instagram.com/lennureluxspa" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-                <span className="text-sm">@lennureluxspa</span>
-              </a>
             </div>
           </div>
 

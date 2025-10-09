@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, CreditCard, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -73,22 +73,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4 items-start">
-                <div className="w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Instagram className="w-6 h-6 text-salvia" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-grafite mb-1">Redes Sociais</h3>
-                  <a 
-                    href="https://instagram.com/lennureluxspa" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-grafite/70 hover:text-salvia transition-colors"
-                  >
-                    @lennureluxspa
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Hours & Payment */}
