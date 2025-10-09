@@ -2,12 +2,13 @@ export type WhatsAppLocation =
   | 'hero_cta' 
   | 'floating_button' 
   | 'contact_section' 
-  | 'map_section';
+  | 'map_section'
+  | 'space_section';
 
 export type SectionName = 
   | 'about_section'
   | 'services_section'
-  | 'therapists_section'
+  | 'space_section'
   | 'differentials_section'
   | 'testimonials_section'
   | 'philosophy_section'

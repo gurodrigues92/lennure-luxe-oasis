@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import Therapists from "@/components/Therapists";
+import Space from "@/components/Space";
 import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
 import Philosophy from "@/components/Philosophy";
@@ -17,7 +17,7 @@ const Index = () => {
   // Create refs for section tracking
   const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
-  const therapistsRef = useRef<HTMLDivElement>(null);
+  const spaceRef = useRef<HTMLDivElement>(null);
   const differentialsRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
   const philosophyRef = useRef<HTMLDivElement>(null);
@@ -37,7 +37,7 @@ const Index = () => {
     sectionRefs: {
       about: aboutRef,
       services: servicesRef,
-      therapists: therapistsRef,
+      space: spaceRef,
       differentials: differentialsRef,
       testimonials: testimonialsRef,
       philosophy: philosophyRef,
@@ -55,8 +55,8 @@ const Index = () => {
       <div ref={servicesRef} data-section="services_section">
         <Services />
       </div>
-      <div ref={therapistsRef} data-section="therapists_section">
-        <Therapists />
+      <div ref={spaceRef} data-section="space_section">
+        <Space />
       </div>
       <div ref={differentialsRef} data-section="differentials_section">
         <Differentials />
