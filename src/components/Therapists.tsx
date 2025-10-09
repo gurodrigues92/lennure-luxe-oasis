@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Maximize2 } from "lucide-react";
 
 const therapists = [
   {
@@ -56,16 +58,34 @@ const Therapists = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-hover transition-elegant mb-4">
-                  <img 
-                    src={therapist.image} 
-                    alt={therapist.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-elegant"
-                    loading="lazy"
-                  />
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-grafite/80 via-grafite/0 to-transparent opacity-0 group-hover:opacity-100 transition-elegant"></div>
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-elegant group-hover:shadow-hover transition-elegant mb-4 cursor-pointer">
+                      <img 
+                        src={therapist.image} 
+                        alt={therapist.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-elegant"
+                        loading="lazy"
+                      />
+                      {/* Overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-grafite/80 via-grafite/0 to-transparent opacity-0 group-hover:opacity-100 transition-elegant flex items-center justify-center">
+                        <Maximize2 className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+                    <div className="relative w-full h-full flex flex-col items-center justify-center p-6">
+                      <img 
+                        src={therapist.image} 
+                        alt={therapist.name}
+                        className="max-w-full max-h-[80vh] object-contain rounded-lg"
+                      />
+                      <p className="text-center text-lg font-cormorant text-grafite mt-4">
+                        {therapist.name}
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 
                 <div className="text-center space-y-1">
                   <h3 className="text-xl font-cormorant text-grafite">
