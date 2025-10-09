@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Philosophy = () => {
   const values = [
     "Presença",
@@ -12,20 +14,26 @@ const Philosophy = () => {
     <section className="py-24 bg-salvia/10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
-          {/* Values */}
-          <div className="animate-fade-in">
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+          {/* Values - Marquee Infinito */}
+          <div className="overflow-hidden w-full mb-8">
+            <div className="flex animate-marquee gap-8 whitespace-nowrap">
+              {/* Primeira cópia */}
               {values.map((value, index) => (
-                <span 
-                  key={index}
-                  className="text-2xl md:text-4xl font-cormorant text-grafite font-light animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {value}
-                  {index < values.length - 1 && (
-                    <span className="text-dourado mx-2">·</span>
-                  )}
-                </span>
+                <React.Fragment key={`first-${index}`}>
+                  <span className="text-2xl md:text-4xl font-cormorant text-grafite font-light">
+                    {value}
+                  </span>
+                  <span className="text-dourado text-2xl md:text-4xl">·</span>
+                </React.Fragment>
+              ))}
+              {/* Segunda cópia para loop perfeito */}
+              {values.map((value, index) => (
+                <React.Fragment key={`second-${index}`}>
+                  <span className="text-2xl md:text-4xl font-cormorant text-grafite font-light">
+                    {value}
+                  </span>
+                  <span className="text-dourado text-2xl md:text-4xl">·</span>
+                </React.Fragment>
               ))}
             </div>
           </div>
