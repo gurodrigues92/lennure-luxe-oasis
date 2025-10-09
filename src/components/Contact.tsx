@@ -1,11 +1,18 @@
 import { MapPin, Phone, Mail, Clock, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
-    const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, "_blank");
+    // Track conversion event
+    trackWhatsAppClick('contact_section', 'Falar no WhatsApp');
+    
+    // 300ms delay to ensure event is sent
+    setTimeout(() => {
+      const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
+      const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, "_blank");
+    }, 300);
   };
 
   return (

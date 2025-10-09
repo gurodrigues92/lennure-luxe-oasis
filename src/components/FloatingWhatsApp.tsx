@@ -1,11 +1,18 @@
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const FloatingWhatsApp = () => {
   const handleWhatsAppClick = () => {
-    const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
-    const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, "_blank");
+    // Track conversion event
+    trackWhatsAppClick('floating_button', 'WhatsApp Flutuante');
+    
+    // 300ms delay to ensure event is sent
+    setTimeout(() => {
+      const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
+      const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, "_blank");
+    }, 300);
   };
 
   return (

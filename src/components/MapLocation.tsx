@@ -1,9 +1,21 @@
 import { Phone, MapPin } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const MapLocation = () => {
-  const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
-  const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Track conversion event
+    trackWhatsAppClick('map_section', 'WhatsApp - Mapa');
+    
+    // 300ms delay to ensure event is sent
+    setTimeout(() => {
+      const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
+      const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, "_blank");
+    }, 300);
+  };
 
   return (
     <section className="bg-perola/30 py-16">
@@ -48,9 +60,8 @@ const MapLocation = () => {
             </a>
 
             <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#"
+              onClick={handleWhatsAppClick}
               className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl hover:bg-perola/50 transition-elegant group"
               aria-label="Enviar mensagem via WhatsApp"
             >

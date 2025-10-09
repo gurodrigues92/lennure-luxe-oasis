@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
@@ -9,19 +10,69 @@ import Contact from "@/components/Contact";
 import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { storeUTMParams } from "@/lib/analytics";
 
 const Index = () => {
+  // Create refs for section tracking
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const therapistsRef = useRef<HTMLDivElement>(null);
+  const differentialsRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const philosophyRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  // Store UTM parameters on mount
+  useEffect(() => {
+    storeUTMParams();
+  }, []);
+
+  // Initialize analytics tracking
+  useAnalytics({
+    enableScrollTracking: true,
+    enableTimeTracking: true,
+    enableSectionTracking: true,
+    sectionRefs: {
+      about: aboutRef,
+      services: servicesRef,
+      therapists: therapistsRef,
+      differentials: differentialsRef,
+      testimonials: testimonialsRef,
+      philosophy: philosophyRef,
+      contact: contactRef,
+      map: mapRef,
+    }
+  });
+
   return (
     <div className="min-h-screen">
       <Hero />
-      <About />
-      <Services />
-      <Therapists />
-      <Differentials />
-      <Testimonials />
-      <Philosophy />
-      <Contact />
-      <MapLocation />
+      <div ref={aboutRef} data-section="about_section">
+        <About />
+      </div>
+      <div ref={servicesRef} data-section="services_section">
+        <Services />
+      </div>
+      <div ref={therapistsRef} data-section="therapists_section">
+        <Therapists />
+      </div>
+      <div ref={differentialsRef} data-section="differentials_section">
+        <Differentials />
+      </div>
+      <div ref={testimonialsRef} data-section="testimonials_section">
+        <Testimonials />
+      </div>
+      <div ref={philosophyRef} data-section="philosophy_section">
+        <Philosophy />
+      </div>
+      <div ref={contactRef} data-section="contact_section">
+        <Contact />
+      </div>
+      <div ref={mapRef} data-section="map_section">
+        <MapLocation />
+      </div>
       <Footer />
       <FloatingWhatsApp />
     </div>

@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/351912847526", "_blank");
+    // Track conversion event
+    trackWhatsAppClick('hero_cta', 'Marcar Sessão Agora');
+    
+    // 300ms delay to ensure event is sent
+    setTimeout(() => {
+      window.open("https://wa.me/351912847526", "_blank");
+    }, 300);
   };
 
   return (
