@@ -144,8 +144,8 @@ export default {
           "100%": { backgroundPosition: "200% center" }
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--gold) / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--gold) / 0.6)" }
+          "0%, 100%": { boxShadow: "0 0 20px hsl(38, 48%, 61% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(38, 48%, 61% / 0.6)" }
         },
       },
       animation: {

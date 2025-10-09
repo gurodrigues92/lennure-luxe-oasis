@@ -142,18 +142,18 @@ All colors MUST be HSL.
 
     --radius: 1rem;
     
-    /* Custom colors - Dourados */
-    --gold-light: 45 65% 85%;        /* Champagne claro */
-    --gold: 43 74% 66%;              /* Dourado clássico */
-    --gold-dark: 43 86% 51%;         /* Dourado intenso */
-    --bronze: 38 73% 39%;            /* Bronze luxo */
+    /* Custom colors - Dourados Champagne/Bronze */
+    --gold-light: 33 28% 75%;        /* #D4C4A8 - Champagne claro */
+    --gold: 38 48% 61%;              /* #CFA168 - Dourado principal */
+    --gold-dark: 33 28% 62%;         /* #BDA87F - Bronze suave */
+    --bronze: 30 35% 45%;            /* #977F5E - Bronze escuro */
     
-    /* Custom colors - Neutros */
-    --ivory: 40 36% 97%;             /* Marfim suave */
-    --cream: 39 33% 92%;             /* Creme */
-    --taupe: 30 8% 55%;              /* Taupe elegante */
-    --charcoal: 0 0% 17%;            /* Grafite profundo */
-    --rose-gold: 15 45% 88%;         /* Rose gold suave */
+    /* Custom colors - Neutros Ajustados */
+    --ivory: 40 25% 97%;             /* #FAF8F5 - Marfim dourado */
+    --cream: 35 20% 92%;             /* #F2EFE9 - Creme harmonioso */
+    --taupe: 30 12% 50%;             /* #847B71 - Taupe quente */
+    --charcoal: 30 5% 20%;           /* #353230 - Grafite quente */
+    --rose-gold: 20 30% 85%;         /* #EBD9D0 - Rose gold suave */
     
     /* Compatibilidade com nomes antigos */
     --champagne: 45 65% 85%;
@@ -162,15 +162,15 @@ All colors MUST be HSL.
     --perola: 39 33% 92%;
     --salvia: 68 12% 67%;
     
-    /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-dark)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--cream)) 50%, hsl(var(--gold-light)) 100%);
-    --gradient-elegant: radial-gradient(circle at top right, hsl(var(--rose-gold)) 0%, hsl(var(--ivory)) 60%);
-    
-    /* Shadows com dourado */
-    --shadow-elegant: 0 4px 24px -4px hsl(var(--gold) / 0.15);
-    --shadow-hover: 0 8px 32px -8px hsl(var(--gold-dark) / 0.3);
-    --shadow-gold: 0 0 40px hsl(var(--gold) / 0.2);
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, hsl(33, 28%, 75%) 0%, hsl(38, 48%, 61%) 50%, hsl(33, 28%, 62%) 100%);
+  --gradient-hero: linear-gradient(135deg, hsl(40, 25%, 97%) 0%, hsl(35, 20%, 92%) 50%, hsl(33, 28%, 75%) 100%);
+  --gradient-elegant: radial-gradient(circle at top right, hsl(20, 30%, 85%) 0%, hsl(40, 25%, 97%) 60%);
+  
+  /* Shadows champagne */
+  --shadow-elegant: 0 4px 24px -4px hsl(38, 48%, 61% / 0.15);
+  --shadow-hover: 0 8px 32px -8px hsl(33, 28%, 62% / 0.3);
+  --shadow-gold: 0 0 40px hsl(38, 48%, 61% / 0.2);
     
     /* Transitions */
     --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -334,16 +334,16 @@ All colors MUST be HSL.
     --border-color-2: hsla(320, 50%, 90%, 0.75);
   }
 
-  /* Versão DOURADA do gradient button */
+  /* Versão CHAMPAGNE/BRONZE do gradient button */
   .gradient-button-gold {
-    --color-1: hsl(43, 74%, 66%);    /* Gold */
-    --color-2: hsl(43, 86%, 51%);    /* Gold Dark */
-    --color-3: hsl(38, 73%, 39%);    /* Bronze */
-    --color-4: hsl(30, 50%, 25%);    /* Deep Bronze */
-    --color-5: hsl(0, 0%, 17%);      /* Charcoal */
+    --color-1: hsl(38, 48%, 61%);    /* #CFA168 - Gold principal */
+    --color-2: hsl(33, 28%, 62%);    /* #BDA87F - Bronze suave */
+    --color-3: hsl(30, 35%, 45%);    /* #977F5E - Bronze escuro */
+    --color-4: hsl(30, 20%, 30%);    /* Deep bronze */
+    --color-5: hsl(30, 5%, 20%);     /* #353230 - Charcoal quente */
     --border-angle: 135deg;
-    --border-color-1: hsla(43, 74%, 80%, 0.4);
-    --border-color-2: hsla(43, 86%, 60%, 0.8);
+    --border-color-1: hsla(38, 48%, 75%, 0.4);
+    --border-color-2: hsla(33, 28%, 70%, 0.8);
   }
 
   .gradient-button-gold:hover {
@@ -351,14 +351,14 @@ All colors MUST be HSL.
     --pos-y: 90%;
     --spread-x: 140%;
     --spread-y: 120%;
-    --color-1: hsl(45, 80%, 75%);    /* Lighter gold */
-    --color-2: hsl(43, 90%, 60%);    /* Bright gold */
-    --color-3: hsl(43, 74%, 66%);    /* Gold */
-    --color-4: hsl(38, 73%, 39%);    /* Bronze */
-    --color-5: hsl(0, 0%, 10%);      /* Almost black */
+    --color-1: hsl(33, 28%, 75%);    /* #D4C4A8 - Champagne claro */
+    --color-2: hsl(38, 48%, 61%);    /* #CFA168 - Gold principal */
+    --color-3: hsl(33, 28%, 62%);    /* #BDA87F - Bronze suave */
+    --color-4: hsl(30, 35%, 45%);    /* #977F5E - Bronze escuro */
+    --color-5: hsl(30, 5%, 15%);     /* Almost black */
     --border-angle: 225deg;
-    --border-color-1: hsla(43, 90%, 85%, 0.2);
-    --border-color-2: hsla(43, 90%, 70%, 0.9);
+    --border-color-1: hsla(33, 28%, 80%, 0.2);
+    --border-color-2: hsla(38, 48%, 70%, 0.9);
     --stop-1: 0%;
     --stop-2: 8.8%;
     --stop-3: 21.44%;
