@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-champagne to-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-dourado rounded-full blur-3xl"></div>
@@ -32,9 +32,11 @@ const Hero = () => {
 
         {/* Hero Content */}
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-light text-grafite leading-tight">
-            Bem‑estar elegante e confidencial
-            <span className="block text-4xl md:text-6xl mt-4 text-dourado">
+          <h1 className="text-5xl md:text-7xl font-light leading-tight">
+            <span className="text-gradient-gold">
+              Bem‑estar elegante e confidencial
+            </span>
+            <span className="block text-4xl md:text-6xl mt-4 text-gold">
               no coração de Lisboa
             </span>
           </h1>
@@ -45,14 +47,13 @@ const Hero = () => {
           </p>
 
           <div className="pt-8">
-            <Button 
-              variant="spa" 
-              size="lg" 
+            <GradientButton 
+              variant="gold"
               onClick={handleWhatsAppClick}
-              className="text-lg px-12 py-6 h-auto"
+              className="text-lg px-12 py-6 animate-glow-pulse"
             >
               Marcar Sessão Agora
-            </Button>
+            </GradientButton>
           </div>
         </div>
       </div>

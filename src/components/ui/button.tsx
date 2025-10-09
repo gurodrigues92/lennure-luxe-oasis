@@ -10,6 +10,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-elegant hover:shadow-hover",
+        gold: "bg-gold text-white hover:bg-gold-dark shadow-gold hover:shadow-hover transition-elegant",
+        goldOutline: "border-2 border-gold bg-transparent text-gold hover:bg-gold hover:text-white shadow-elegant transition-elegant",
+        goldGradient: "bg-gradient-gold text-white hover:opacity-90 shadow-gold",
         spa: "bg-salvia text-white hover:bg-salvia/90 shadow-elegant hover:shadow-hover",
         elegant: "bg-dourado text-grafite hover:bg-dourado/90 shadow-elegant hover:shadow-hover",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
@@ -22,6 +25,7 @@ const buttonVariants = cva(
         default: "h-12 px-6 py-3 text-base",
         sm: "h-10 rounded-lg px-4 text-sm",
         lg: "h-14 rounded-lg px-10 text-lg",
+        xl: "h-16 rounded-xl px-12 text-xl",
         icon: "h-10 w-10",
       },
     },

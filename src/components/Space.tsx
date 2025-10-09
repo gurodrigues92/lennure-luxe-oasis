@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Maximize2 } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/analytics";
@@ -107,7 +108,7 @@ const Space = () => {
             {/* Therapist Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
               <Button 
-                variant="outline" 
+                variant="goldOutline" 
                 size="lg"
                 onClick={() => window.open("https://lennure.pt/terapeutas-femininas", "_blank")}
                 className="flex-1 min-w-[200px]"
@@ -115,7 +116,7 @@ const Space = () => {
                 Ver Terapeutas Femininas
               </Button>
               <Button 
-                variant="outline" 
+                variant="goldOutline" 
                 size="lg"
                 onClick={() => window.open("https://lennure.pt/terapeutas-masculinos", "_blank")}
                 className="flex-1 min-w-[200px]"
@@ -129,14 +130,13 @@ const Space = () => {
               <p className="text-lg text-grafite/70">
                 Quer conhecer pessoalmente nosso espaço?
               </p>
-              <Button 
-                variant="outline" 
-                size="lg"
+              <GradientButton 
+                variant="gold"
+                className="min-w-[250px] text-lg px-10 py-4"
                 onClick={handleWhatsAppClick}
-                className="min-w-[250px]"
               >
                 Agendar Visita
-              </Button>
+              </GradientButton>
             </div>
           </div>
         </div>

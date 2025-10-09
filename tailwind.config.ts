@@ -51,6 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Dourados
+        'gold-light': 'hsl(var(--gold-light))',
+        'gold': 'hsl(var(--gold))',
+        'gold-dark': 'hsl(var(--gold-dark))',
+        'bronze': 'hsl(var(--bronze))',
+        // Neutros
+        'ivory': 'hsl(var(--ivory))',
+        'cream': 'hsl(var(--cream))',
+        'taupe': 'hsl(var(--taupe))',
+        'charcoal': 'hsl(var(--charcoal))',
+        'rose-gold': 'hsl(var(--rose-gold))',
+        // Compatibilidade
         champagne: "hsl(var(--champagne))",
         dourado: "hsl(var(--dourado))",
         grafite: "hsl(var(--grafite))",
@@ -127,6 +139,14 @@ export default {
             transform: "translateX(-25%)"
           }
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" }
+        },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--gold) / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--gold) / 0.6)" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -135,6 +155,8 @@ export default {
         "fade-in-up": "fade-in-up 0.5s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         "marquee": "marquee 12s linear infinite",
+        "shimmer": "shimmer 3s linear infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
     },
   },

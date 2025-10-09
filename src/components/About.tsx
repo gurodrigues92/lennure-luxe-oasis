@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-elegant">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Image */}
@@ -19,9 +19,9 @@ const About = () => {
 
           {/* Content */}
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-light text-grafite leading-tight">
-              Um refúgio de bem-estar no
-              <span className="block text-dourado mt-2">centro de Lisboa</span>
+            <h2 className="text-4xl md:text-5xl font-light leading-tight">
+              <span className="text-gradient-gold">Um refúgio de bem-estar no</span>
+              <span className="block text-gold mt-2">centro de Lisboa</span>
             </h2>
             
             <div className="space-y-4 text-grafite/80 text-lg leading-relaxed">

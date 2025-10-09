@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, CreditCard } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
 const Contact = () => {
@@ -106,14 +106,13 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Button 
-                variant="spa" 
-                size="lg" 
-                className="w-full"
+              <GradientButton 
+                variant="gold"
+                className="w-full text-lg px-10 py-4"
                 onClick={handleWhatsAppClick}
               >
                 Falar no WhatsApp
-              </Button>
+              </GradientButton>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ const MapLocation = () => {
               href="https://www.google.com/maps/place/Lennure+Lux+Spa/@38.737384,-9.1476541,17z"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl hover:bg-perola/50 transition-elegant group"
+              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Ver localização no Google Maps"
             >
               <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
@@ -47,7 +47,7 @@ const MapLocation = () => {
 
             <a
               href="tel:+351215862245"
-              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl hover:bg-perola/50 transition-elegant group"
+              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Ligar para o Lennure Lux Spa"
             >
               <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
@@ -62,7 +62,7 @@ const MapLocation = () => {
             <a
               href="#"
               onClick={handleWhatsAppClick}
-              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl hover:bg-perola/50 transition-elegant group"
+              className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Enviar mensagem via WhatsApp"
             >
               <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">

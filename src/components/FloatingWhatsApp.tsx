@@ -17,10 +17,10 @@ const FloatingWhatsApp = () => {
 
   return (
     <Button
-      variant="spa"
+      variant="gold"
       size="lg"
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 p-0 shadow-2xl hover:scale-110 transition-elegant"
+      className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 p-0 shadow-gold hover:scale-110 transition-elegant animate-glow-pulse"
       aria-label="Falar no WhatsApp"
     >
       <WhatsAppIcon className="w-7 h-7" />

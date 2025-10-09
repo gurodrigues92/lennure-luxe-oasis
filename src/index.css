@@ -7,52 +7,170 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* CSS Properties para Gradient Button */
+  @property --pos-x {
+    syntax: '<percentage>';
+    initial-value: 11.14%;
+    inherits: false;
+  }
+
+  @property --pos-y {
+    syntax: '<percentage>';
+    initial-value: 140%;
+    inherits: false;
+  }
+
+  @property --spread-x {
+    syntax: '<percentage>';
+    initial-value: 150%;
+    inherits: false;
+  }
+
+  @property --spread-y {
+    syntax: '<percentage>';
+    initial-value: 180.06%;
+    inherits: false;
+  }
+
+  @property --color-1 {
+    syntax: '<color>';
+    initial-value: #000;
+    inherits: false;
+  }
+
+  @property --color-2 {
+    syntax: '<color>';
+    initial-value: #08012c;
+    inherits: false;
+  }
+
+  @property --color-3 {
+    syntax: '<color>';
+    initial-value: #4e1e40;
+    inherits: false;
+  }
+
+  @property --color-4 {
+    syntax: '<color>';
+    initial-value: #70464e;
+    inherits: false;
+  }
+
+  @property --color-5 {
+    syntax: '<color>';
+    initial-value: #88394c;
+    inherits: false;
+  }
+
+  @property --border-angle {
+    syntax: '<angle>';
+    initial-value: 20deg;
+    inherits: true;
+  }
+
+  @property --border-color-1 {
+    syntax: '<color>';
+    initial-value: hsla(340, 75%, 60%, 0.2);
+    inherits: true;
+  }
+
+  @property --border-color-2 {
+    syntax: '<color>';
+    initial-value: hsla(340, 75%, 40%, 0.75);
+    inherits: true;
+  }
+
+  @property --stop-1 {
+    syntax: '<percentage>';
+    initial-value: 37.35%;
+    inherits: false;
+  }
+
+  @property --stop-2 {
+    syntax: '<percentage>';
+    initial-value: 61.36%;
+    inherits: false;
+  }
+
+  @property --stop-3 {
+    syntax: '<percentage>';
+    initial-value: 78.42%;
+    inherits: false;
+  }
+
+  @property --stop-4 {
+    syntax: '<percentage>';
+    initial-value: 89.52%;
+    inherits: false;
+  }
+
+  @property --stop-5 {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;
+  }
+
   :root {
-    /* Lennure Lux Spa - Paleta de cores luxuosa */
-    --background: 32 38% 93%;
-    --foreground: 0 0% 24%;
+    /* Lennure Lux Spa - Paleta Dourada */
+    --background: 40 36% 97%;        /* Ivory */
+    --foreground: 0 0% 17%;          /* Charcoal */
 
-    --card: 28 28% 93%;
-    --card-foreground: 0 0% 24%;
+    --card: 40 36% 97%;
+    --card-foreground: 0 0% 17%;
 
-    --popover: 28 28% 93%;
-    --popover-foreground: 0 0% 24%;
+    --popover: 40 36% 97%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 0 0% 24%;
-    --primary-foreground: 32 38% 93%;
+    --primary: 43 74% 66%;           /* Gold */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 38 28% 75%;
-    --secondary-foreground: 0 0% 24%;
+    --secondary: 45 65% 85%;         /* Gold Light */
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 28 21% 89%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 39 33% 92%;             /* Cream */
+    --muted-foreground: 30 8% 55%;   /* Taupe */
 
-    --accent: 68 12% 67%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 15 45% 88%;            /* Rose Gold */
+    --accent-foreground: 0 0% 17%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 28 21% 89%;
-    --input: 28 21% 89%;
-    --ring: 38 28% 75%;
+    --border: 39 33% 92%;
+    --input: 39 33% 92%;
+    --ring: 43 74% 66%;
 
     --radius: 1rem;
     
-    /* Custom colors */
-    --champagne: 32 38% 93%;
-    --dourado: 38 28% 75%;
-    --grafite: 0 0% 24%;
-    --perola: 28 21% 89%;
+    /* Custom colors - Dourados */
+    --gold-light: 45 65% 85%;        /* Champagne claro */
+    --gold: 43 74% 66%;              /* Dourado clássico */
+    --gold-dark: 43 86% 51%;         /* Dourado intenso */
+    --bronze: 38 73% 39%;            /* Bronze luxo */
+    
+    /* Custom colors - Neutros */
+    --ivory: 40 36% 97%;             /* Marfim suave */
+    --cream: 39 33% 92%;             /* Creme */
+    --taupe: 30 8% 55%;              /* Taupe elegante */
+    --charcoal: 0 0% 17%;            /* Grafite profundo */
+    --rose-gold: 15 45% 88%;         /* Rose gold suave */
+    
+    /* Compatibilidade com nomes antigos */
+    --champagne: 45 65% 85%;
+    --dourado: 43 74% 66%;
+    --grafite: 0 0% 17%;
+    --perola: 39 33% 92%;
     --salvia: 68 12% 67%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--champagne)) 0%, hsl(var(--perola)) 100%);
-    --gradient-elegant: linear-gradient(180deg, hsl(var(--champagne)) 0%, hsl(var(--background)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-dark)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--cream)) 50%, hsl(var(--gold-light)) 100%);
+    --gradient-elegant: radial-gradient(circle at top right, hsl(var(--rose-gold)) 0%, hsl(var(--ivory)) 60%);
     
-    /* Shadows */
-    --shadow-elegant: 0 4px 24px -4px hsl(var(--grafite) / 0.08);
-    --shadow-hover: 0 8px 32px -8px hsl(var(--dourado) / 0.2);
+    /* Shadows com dourado */
+    --shadow-elegant: 0 4px 24px -4px hsl(var(--gold) / 0.15);
+    --shadow-hover: 0 8px 32px -8px hsl(var(--gold-dark) / 0.3);
+    --shadow-gold: 0 0 40px hsl(var(--gold) / 0.2);
     
     /* Transitions */
     --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,19 +194,19 @@ All colors MUST be HSL.
 
   .dark {
     --background: 0 0% 12%;
-    --foreground: 32 38% 93%;
+    --foreground: 45 65% 85%;
 
     --card: 0 0% 16%;
-    --card-foreground: 32 38% 93%;
+    --card-foreground: 45 65% 85%;
 
     --popover: 0 0% 16%;
-    --popover-foreground: 32 38% 93%;
+    --popover-foreground: 45 65% 85%;
 
-    --primary: 32 38% 93%;
-    --primary-foreground: 0 0% 24%;
+    --primary: 45 65% 85%;
+    --primary-foreground: 0 0% 17%;
 
     --secondary: 0 0% 20%;
-    --secondary-foreground: 32 38% 93%;
+    --secondary-foreground: 45 65% 85%;
 
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
@@ -119,9 +237,147 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  .gradient-button {
+    @apply relative appearance-none cursor-pointer;
+    background: radial-gradient(
+      var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+      var(--color-1) var(--stop-1),
+      var(--color-2) var(--stop-2),
+      var(--color-3) var(--stop-3),
+      var(--color-4) var(--stop-4),
+      var(--color-5) var(--stop-5)
+    );
+    transition:
+      --pos-x 0.5s,
+      --pos-y 0.5s,
+      --spread-x 0.5s,
+      --spread-y 0.5s,
+      --color-1 0.5s,
+      --color-2 0.5s,
+      --color-3 0.5s,
+      --color-4 0.5s,
+      --color-5 0.5s,
+      --border-angle 0.5s,
+      --border-color-1 0.5s,
+      --border-color-2 0.5s,
+      --stop-1 0.5s,
+      --stop-2 0.5s,
+      --stop-3 0.5s,
+      --stop-4 0.5s,
+      --stop-5 0.5s;
+  }
+
+  .gradient-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      var(--border-angle),
+      var(--border-color-1),
+      var(--border-color-2)
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .gradient-button:hover {
+    --pos-x: 0%;
+    --pos-y: 91.51%;
+    --spread-x: 120.24%;
+    --spread-y: 103.18%;
+    --color-1: #c96287;
+    --color-2: #c66c64;
+    --color-3: #cc7d23;
+    --color-4: #37140a;
+    --color-5: #000;
+    --border-angle: 190deg;
+    --border-color-1: hsla(340, 78%, 90%, 0.1);
+    --border-color-2: hsla(340, 75%, 90%, 0.6);
+    --stop-1: 0%;
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
+  }
+
+  .gradient-button-variant {
+    --color-1: #000022;
+    --color-2: #1f3f6d;
+    --color-3: #469396;
+    --color-4: #f1ffa5;
+    --border-angle: 200deg;
+    --border-color-1: hsla(320, 75%, 90%, 0.6);
+    --border-color-2: hsla(320, 50%, 90%, 0.15);
+  }
+
+  .gradient-button-variant:hover {
+    --pos-x: 0%;
+    --pos-y: 95.51%;
+    --spread-x: 110.24%;
+    --spread-y: 110.2%;
+    --color-1: #000020;
+    --color-2: #f1ffa5;
+    --color-3: #469396;
+    --color-4: #1f3f6d;
+    --color-5: #000;
+    --stop-1: 0%;
+    --stop-2: 10%;
+    --stop-3: 35.44%;
+    --stop-4: 71.34%;
+    --stop-5: 90.76%;
+    --border-angle: 210deg;
+    --border-color-1: hsla(320, 75%, 90%, 0.2);
+    --border-color-2: hsla(320, 50%, 90%, 0.75);
+  }
+
+  /* Versão DOURADA do gradient button */
+  .gradient-button-gold {
+    --color-1: hsl(43, 74%, 66%);    /* Gold */
+    --color-2: hsl(43, 86%, 51%);    /* Gold Dark */
+    --color-3: hsl(38, 73%, 39%);    /* Bronze */
+    --color-4: hsl(30, 50%, 25%);    /* Deep Bronze */
+    --color-5: hsl(0, 0%, 17%);      /* Charcoal */
+    --border-angle: 135deg;
+    --border-color-1: hsla(43, 74%, 80%, 0.4);
+    --border-color-2: hsla(43, 86%, 60%, 0.8);
+  }
+
+  .gradient-button-gold:hover {
+    --pos-x: 0%;
+    --pos-y: 90%;
+    --spread-x: 140%;
+    --spread-y: 120%;
+    --color-1: hsl(45, 80%, 75%);    /* Lighter gold */
+    --color-2: hsl(43, 90%, 60%);    /* Bright gold */
+    --color-3: hsl(43, 74%, 66%);    /* Gold */
+    --color-4: hsl(38, 73%, 39%);    /* Bronze */
+    --color-5: hsl(0, 0%, 10%);      /* Almost black */
+    --border-angle: 225deg;
+    --border-color-1: hsla(43, 90%, 85%, 0.2);
+    --border-color-2: hsla(43, 90%, 70%, 0.9);
+    --stop-1: 0%;
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-dourado to-grafite bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-gold-dark to-bronze bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
   }
   
   .shadow-elegant {
@@ -130,6 +386,14 @@ All colors MUST be HSL.
   
   .shadow-hover {
     box-shadow: var(--shadow-hover);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.3);
   }
   
   .transition-elegant {

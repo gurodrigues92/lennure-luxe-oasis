@@ -56,8 +56,8 @@ const Differentials = () => {
                 className="flex gap-4 items-start animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center">
-                  <item.icon className="w-6 h-6 text-salvia" />
+                <div className="flex-shrink-0 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
+                  <item.icon className="w-6 h-6 text-gold-dark" />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-lg font-medium text-grafite">
