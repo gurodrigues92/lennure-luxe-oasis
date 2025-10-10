@@ -1,4 +1,4 @@
-import { Star, ExternalLink } from "lucide-react";
+import { Star } from "lucide-react";
 import { 
   Carousel, 
   CarouselContent, 
@@ -113,7 +113,6 @@ const Testimonials = () => {
             >
               <Star className="w-5 h-5 fill-white" />
               <span>Ver Mais Avaliações no Google</span>
-              <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         </div>
