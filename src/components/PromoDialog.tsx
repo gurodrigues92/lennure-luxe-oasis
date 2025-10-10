@@ -11,10 +11,10 @@ const PromoDialog = () => {
     const hasSeenPromo = localStorage.getItem("hasSeenInaugurationPromo");
     
     if (!hasSeenPromo) {
-      // Delay de 5 segundos para não ser intrusivo
+      // Delay de 2 segundos para exibição
       setTimeout(() => {
         setOpen(true);
-      }, 5000);
+      }, 2000);
     }
   }, []);
 
