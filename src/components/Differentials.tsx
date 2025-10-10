@@ -73,7 +73,7 @@ const Differentials = () => {
           </div>
 
           {/* Therapist Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16 max-w-2xl mx-auto">
+          <div className="flex flex-row gap-3 justify-center mt-16 max-w-2xl mx-auto">
             <Button 
               variant="outline"
               size="lg"
