@@ -32,7 +32,7 @@ const PromoDialog = () => {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="max-w-md bg-[#F5E8DA] border-gold/20 p-0 overflow-hidden">
+      <DialogContent className="max-w-md bg-[#F5E8DA] border-gold/20 p-0 overflow-hidden" hideCloseButton>
         {/* Botão fechar customizado */}
         <button
           onClick={handleClose}
