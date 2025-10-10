@@ -22,7 +22,7 @@ const MapLocation = () => {
       <div className="container mx-auto px-4 mb-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-cormorant text-grafite mb-6">
+            <h2 className="text-4xl md:text-5xl font-cormorant font-bold bg-gradient-gold bg-clip-text text-transparent mb-6">
               Venha conhecer-nos
             </h2>
           </div>

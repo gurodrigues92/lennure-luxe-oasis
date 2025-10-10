@@ -28,7 +28,7 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-light text-grafite mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
               O Que Dizem os Nossos Clientes
             </h2>
             <p className="text-lg text-grafite/70">

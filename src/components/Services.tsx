@@ -32,7 +32,7 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in relative z-10">
-            <h2 className="text-4xl md:text-5xl font-cormorant font-bold text-charcoal mb-4">
+            <h2 className="text-4xl md:text-5xl font-cormorant font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
               Serviços Oferecidos
             </h2>
             <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">

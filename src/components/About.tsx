@@ -19,9 +19,8 @@ const About = () => {
 
           {/* Content */}
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-light leading-tight">
-              <span className="text-gradient-gold">Um refúgio de bem-estar no</span>
-              <span className="block text-gold mt-2">centro de Lisboa</span>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-gold bg-clip-text text-transparent">
+              Um refúgio de bem-estar no centro de Lisboa
             </h2>
             
             <div className="space-y-4 text-grafite/80 text-lg leading-relaxed">
