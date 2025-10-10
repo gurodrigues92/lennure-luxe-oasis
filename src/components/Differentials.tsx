@@ -35,7 +35,7 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-gold-light via-gold to-bronze">
+    <section className="py-24 bg-gradient-to-br from-bronze via-gold-dark to-gold">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
