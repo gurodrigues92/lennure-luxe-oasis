@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { 
   Carousel, 
   CarouselContent, 
@@ -99,9 +99,23 @@ const Testimonials = () => {
             </CarouselContent>
             
             {/* Navigation Buttons */}
-            <CarouselPrevious className="-left-12" />
-            <CarouselNext className="-right-12" />
+            <CarouselPrevious className="-left-4 md:-left-12" />
+            <CarouselNext className="-right-4 md:-right-12" />
           </Carousel>
+
+          {/* Google Reviews Button */}
+          <div className="text-center mt-12 animate-fade-in">
+            <a
+              href="https://maps.app.goo.gl/URL_DO_PERFIL_GOOGLE_AQUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dourado via-dourado to-dourado/90 hover:from-dourado/90 hover:to-dourado text-white rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              <Star className="w-5 h-5 fill-white" />
+              <span>Ver Mais Avaliações no Google</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
