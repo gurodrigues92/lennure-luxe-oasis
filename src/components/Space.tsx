@@ -6,24 +6,24 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 
 const spaces = [
   {
-    name: "Sala de Espera",
+    name: "Sala de Massagem",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_j28qs0.jpg",
-    description: "Boas-vindas num ambiente acolhedor e discreto"
+    description: "Conforto e tranquilidade em cada detalhe"
   },
   {
-    name: "Recepção",
+    name: "Sala de Espera",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.55_rkrws2.jpg",
     description: "Boas-vindas num ambiente acolhedor e discreto"
   },
   {
-    name: "Sala de Massagem",
+    name: "Recepção",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.56_oahrl8.jpg",
-    description: "Conforto e tranquilidade em cada detalhe"
+    description: "Atendimento elegante e profissional"
   },
   {
-    name: "Área de Relaxamento",
+    name: "Casa de Banho",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_1_wohnwm.jpg",
-    description: "Momentos de pausa antes ou após a sessão"
+    description: "Higiene impecável e cuidado em cada detalhe"
   }
 ];
 
