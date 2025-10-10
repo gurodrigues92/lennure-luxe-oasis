@@ -23,7 +23,7 @@ const FloatingWhatsApp = () => {
       className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 p-0 shadow-gold hover:scale-110 transition-elegant animate-glow-pulse"
       aria-label="Falar no WhatsApp"
     >
-      <WhatsAppIcon className="w-11 h-11" />
+      <WhatsAppIcon size={56} className="w-14 h-14" />
     </Button>
   );
 };
