@@ -35,8 +35,8 @@ const MapLocation = () => {
               className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Ver localização no Google Maps"
             >
-              <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
-                <MapPin className="w-7 h-7 text-salvia" />
+              <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
+                <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-medium text-grafite text-center">Localização</h3>
               <p className="text-grafite/70 text-center text-sm">
@@ -50,8 +50,8 @@ const MapLocation = () => {
               className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Ligar para o Lennure Lux Spa"
             >
-              <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
-                <Phone className="w-7 h-7 text-salvia" />
+              <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
+                <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-medium text-grafite text-center">Telefone</h3>
               <p className="text-grafite/70 text-center text-sm group-hover:text-salvia transition-colors">
@@ -65,8 +65,8 @@ const MapLocation = () => {
               className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Enviar mensagem via WhatsApp"
             >
-              <div className="w-14 h-14 bg-salvia/10 rounded-xl flex items-center justify-center group-hover:bg-salvia/20 transition-elegant">
-                <WhatsAppIcon size={28} className="text-salvia" />
+              <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
+                <WhatsAppIcon size={32} className="text-white" />
               </div>
               <h3 className="font-medium text-grafite text-center">WhatsApp</h3>
               <p className="text-grafite/70 text-center text-sm group-hover:text-salvia transition-colors">
