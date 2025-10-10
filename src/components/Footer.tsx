@@ -14,7 +14,7 @@ const Footer = () => {
                 className="h-16 w-auto brightness-0 invert"
               />
               <p className="text-white/70 text-sm leading-relaxed">
-                Bem-estar elegante e confidencial no coração de Lisboa.
+                Bem-estar e experiência sensorial
               </p>
             </div>
 
