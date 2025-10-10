@@ -35,15 +35,15 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section className="py-24 bg-perola/20">
+    <section className="py-24 bg-gradient-to-br from-gold-light via-gold to-bronze">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold title-gold-gradient mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-cream drop-shadow-sm mb-4">
               Diferenciais do Spa
             </h2>
-            <p className="text-lg text-grafite/70 max-w-2xl mx-auto">
+            <p className="text-lg text-cream/90 max-w-2xl mx-auto">
               O que torna o Lennure uma experiência única
             </p>
           </div>
@@ -56,14 +56,14 @@ const Differentials = () => {
                 className="flex gap-4 items-start animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                  <item.icon className="w-6 h-6 text-gold-dark" />
+                <div className="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-medium text-grafite">
+                  <h3 className="text-lg font-medium text-white">
                     {item.title}
                   </h3>
-                  <p className="text-grafite/70 text-sm">
+                  <p className="text-white/90 text-sm">
                     {item.description}
                   </p>
                 </div>
