@@ -95,7 +95,7 @@ const MapLocation = () => {
                     Estacionamento Próximo
                   </h3>
                   <p className="text-grafite/80 leading-relaxed mb-4">
-                    Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> de um estacionamento pago.
+                    Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> de um estacionamento.
                   </p>
                   
                   <div className="bg-white/60 rounded-lg p-4 mb-4 border border-gold/10">
