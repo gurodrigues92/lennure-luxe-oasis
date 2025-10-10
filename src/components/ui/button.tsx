@@ -13,7 +13,7 @@ const buttonVariants = cva(
         gold: "bg-gold text-white hover:bg-gold-dark shadow-gold hover:shadow-hover transition-elegant",
         goldOutline: "border-2 border-gold bg-transparent text-gold hover:bg-gold hover:text-white shadow-elegant transition-elegant",
         goldGradient: "bg-gradient-gold text-white hover:opacity-90 shadow-gold",
-        spa: "bg-salvia text-white hover:bg-salvia/90 shadow-elegant hover:shadow-hover",
+        spa: "bg-gold text-white hover:bg-gold-dark shadow-elegant hover:shadow-hover",
         elegant: "bg-dourado text-grafite hover:bg-dourado/90 shadow-elegant hover:shadow-hover",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-grafite/20 bg-transparent text-grafite hover:bg-grafite/5",

@@ -33,8 +33,8 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6 animate-fade-in">
               <div className="flex gap-4 items-start">
-                <div className="w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-salvia" />
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-gold-dark" />
                 </div>
                 <div>
                   <h3 className="font-medium text-grafite mb-1">Localização</h3>
@@ -46,13 +46,13 @@ const Contact = () => {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-salvia" />
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-gold-dark" />
                 </div>
               <div>
                 <h3 className="font-medium text-grafite mb-1">Telefone</h3>
                 <p className="text-grafite/70">
-                  <a href="tel:+351215862245" className="hover:text-salvia transition-colors">
+                  <a href="tel:+351215862245" className="hover:text-gold transition-colors">
                     +351 21 586 2245
                   </a>
                   <br />
@@ -60,7 +60,7 @@ const Contact = () => {
                     href={`https://wa.me/351912847526?text=${encodeURIComponent("Olá! Vim através do site e gostaria de agendar uma sessão.")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-salvia transition-colors"
+                    className="hover:text-gold transition-colors"
                   >
                     +351 912 847 526
                   </a>
@@ -69,8 +69,8 @@ const Contact = () => {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="w-12 h-12 bg-salvia/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-salvia" />
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-gold-dark" />
                 </div>
                 <div>
                   <h3 className="font-medium text-grafite mb-1">E-mail</h3>
@@ -86,7 +86,7 @@ const Contact = () => {
             <div className="space-y-6 animate-fade-in-up">
               <div className="bg-perola/30 rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-6 h-6 text-salvia" />
+                  <Clock className="w-6 h-6 text-gold-dark" />
                   <h3 className="text-xl font-cormorant text-grafite">Horário de Funcionamento</h3>
                 </div>
                 <div className="space-y-2 text-grafite/70">
@@ -98,7 +98,7 @@ const Contact = () => {
 
               <div className="bg-perola/30 rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <CreditCard className="w-6 h-6 text-salvia" />
+                  <CreditCard className="w-6 h-6 text-gold-dark" />
                   <h3 className="text-xl font-cormorant text-grafite">Formas de Pagamento</h3>
                 </div>
                 <p className="text-grafite/70">

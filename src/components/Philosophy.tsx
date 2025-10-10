@@ -11,7 +11,7 @@ const Philosophy = () => {
   ];
 
   return (
-    <section className="py-24 bg-salvia/10">
+    <section className="py-24 bg-cream/50">
       {/* Marquee full-width - sem bordas laterais */}
       <div className="overflow-hidden w-full mb-16">
         <div className="flex animate-marquee gap-8 whitespace-nowrap">

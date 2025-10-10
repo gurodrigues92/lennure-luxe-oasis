@@ -54,7 +54,7 @@ const MapLocation = () => {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-medium text-grafite text-center">Telefone</h3>
-              <p className="text-grafite/70 text-center text-sm group-hover:text-salvia transition-colors">
+              <p className="text-grafite/70 text-center text-sm group-hover:text-gold transition-colors">
                 +351 21 586 2245
               </p>
             </a>
@@ -69,7 +69,7 @@ const MapLocation = () => {
                 <WhatsAppIcon size={32} className="text-white" />
               </div>
               <h3 className="font-medium text-grafite text-center">WhatsApp</h3>
-              <p className="text-grafite/70 text-center text-sm group-hover:text-salvia transition-colors">
+              <p className="text-grafite/70 text-center text-sm group-hover:text-gold transition-colors">
                 +351 912 847 526
               </p>
             </a>

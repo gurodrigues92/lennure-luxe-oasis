@@ -42,15 +42,15 @@ const About = () => {
 
             <div className="pt-6 flex flex-wrap gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-salvia rounded-full"></div>
+                <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span className="text-sm text-grafite/70">Privacidade Total</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-salvia rounded-full"></div>
+                <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span className="text-sm text-grafite/70">Higiene Rigorosa</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-salvia rounded-full"></div>
+                <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span className="text-sm text-grafite/70">Atendimento Exclusivo</span>
               </div>
             </div>
