@@ -1,4 +1,4 @@
-// Instagram removed - account doesn't exist
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,19 +23,19 @@ const Footer = () => {
               <h3 className="font-cormorant text-lg mb-4">Informações</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-white/70 hover:text-white transition-colors">
+                  <Link to="/politica-privacidade" className="text-white/70 hover:text-white transition-colors">
                     Política de Privacidade
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-white transition-colors">
+                  <Link to="/termos-uso" className="text-white/70 hover:text-white transition-colors">
                     Termos de Uso
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-white transition-colors">
+                  <Link to="/politica-cancelamento" className="text-white/70 hover:text-white transition-colors">
                     Política de Cancelamento
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
