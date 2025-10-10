@@ -2,21 +2,33 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ricardo",
-    location: "Lisboa",
-    text: "Um espaço verdadeiramente distinto. Atendimento impecável e ambiente acolhedor.",
+    name: "Walmir Melo",
+    location: "James PT",
+    text: "Experiência excelente no Lennure Lux Spa. Ambiente muito bonito, limpo e acolhedor. Profissionais atenciosas e preparadas, que proporcionam um atendimento de alto nível e relaxamento verdadeiro. Um espaço ideal para quem procura bem-estar, tranquilidade e cuidado com todos os detalhes. Recomendo totalmente.",
     rating: 5
   },
   {
-    name: "Pedro",
-    location: "Cascais",
-    text: "Privacidade total e um nível de cuidado que nunca encontrei noutros spas.",
+    name: "Laís Silva",
+    location: "Lisboa",
+    text: "O Lennure Lux Spa é um espaço impecável. Ambiente elegante, limpo e muito tranquilo. Desde a receção até o final do atendimento, tudo é feito com profissionalismo e atenção. Um lugar perfeito para relaxar e cuidar do corpo e da mente.",
     rating: 5
   },
   {
-    name: "Helena",
+    name: "Ayme Testoni",
     location: "Lisboa",
-    text: "Senti‑me renovada. Profissionalismo e serenidade em cada detalhe.",
+    text: "Fomos atendidos pela terapeuta Luana e gostei muito. Profissional atenciosa, ambiente calmo e experiência excelente.",
+    rating: 5
+  },
+  {
+    name: "Alyce Lima",
+    location: "Lisboa",
+    text: "Fui com o meu namorado e fomos atendidos pela terapeuta Luana. Profissional excelente, ambiente calmo e muito acolhedor. Saímos totalmente relaxados.",
+    rating: 5
+  },
+  {
+    name: "Anonymous Client",
+    location: "International",
+    text: "Best experience I've had in a spa. The location is perfect and the staff is amazing.. definitely gonna come back!",
     rating: 5
   }
 ];
@@ -37,7 +49,7 @@ const Testimonials = () => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
