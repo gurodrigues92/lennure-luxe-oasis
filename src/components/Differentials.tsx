@@ -78,17 +78,23 @@ const Differentials = () => {
               variant="outline"
               size="lg"
               onClick={() => window.open("https://lennure.pt/terapeutas-femininas", "_blank")}
-              className="flex-1 min-w-[200px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
+              className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
-              Ver Terapeutas Femininas
+              <span className="flex flex-col items-center gap-1 leading-tight">
+                <span>Terapeutas</span>
+                <span>Femininas</span>
+              </span>
             </Button>
             <Button 
               variant="outline"
               size="lg"
               onClick={() => window.open("https://lennure.pt/terapeutas-masculinos", "_blank")}
-              className="flex-1 min-w-[200px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
+              className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
-              Ver Terapeutas Masculinos
+              <span className="flex flex-col items-center gap-1 leading-tight">
+                <span>Terapeutas</span>
+                <span>Masculinos</span>
+              </span>
             </Button>
           </div>
         </div>
