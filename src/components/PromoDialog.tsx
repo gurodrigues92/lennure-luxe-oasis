@@ -11,10 +11,10 @@ const PromoDialog = () => {
     const hasSeenPromo = localStorage.getItem("hasSeenInaugurationPromo");
     
     if (!hasSeenPromo) {
-      // Delay de 1 segundo para não ser intrusivo
+      // Delay de 5 segundos para não ser intrusivo
       setTimeout(() => {
         setOpen(true);
-      }, 1000);
+      }, 5000);
     }
   }, []);
 
@@ -32,7 +32,7 @@ const PromoDialog = () => {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="max-w-md bg-[#F5E8DA] border-gold/20 p-0 overflow-hidden" hideCloseButton>
+      <DialogContent className="max-w-md w-[90vw] sm:w-full bg-[#F5E8DA] border-gold/20 p-0 overflow-hidden rounded-2xl" hideCloseButton>
         {/* Botão fechar customizado */}
         <button
           onClick={handleClose}
