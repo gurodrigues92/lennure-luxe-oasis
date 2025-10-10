@@ -59,9 +59,6 @@ const Footer = () => {
                   <span className="text-white/90 font-medium">ética profissional</span> e{" "}
                   <span className="text-white/90 font-medium">privacidade do cliente</span>.
                 </p>
-                <p className="text-gold-light font-medium">
-                  ⚠️ Proibido menores de 18 anos.
-                </p>
                 <p>
                   <strong className="text-white/90">Pagamentos aceites:</strong> Numerário, Cartão (Visa/Mastercard), Transferência ou MBWay.
                 </p>

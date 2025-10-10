@@ -74,18 +74,9 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 3. Restrição de Idade */}
-            <div className="bg-gold/10 p-6 rounded-lg">
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">3. Restrição de Idade</h2>
-              <p className="text-charcoal/80 leading-relaxed font-medium">
-                ⚠️ O acesso ao Site e aos serviços da Lennure Lux Spa é <strong>estritamente proibido a menores 
-                de 18 anos</strong>. Ao utilizar o Site, declara ter 18 anos ou mais.
-              </p>
-            </div>
-
-            {/* 4. Utilização do Site */}
+            {/* 3. Utilização do Site */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">4. Regras de Utilização</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">3. Regras de Utilização</h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Ao utilizar este Site, compromete-se a:
               </p>
@@ -99,9 +90,9 @@ const TermsOfService = () => {
               </ul>
             </div>
 
-            {/* 5. Marcações */}
+            {/* 4. Marcações */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">5. Condições de Marcação</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">4. Condições de Marcação</h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Para marcação de serviços:
               </p>
@@ -115,9 +106,9 @@ const TermsOfService = () => {
               </ul>
             </div>
 
-            {/* 6. Pagamentos */}
+            {/* 5. Pagamentos */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">6. Condições de Pagamento</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">5. Condições de Pagamento</h2>
               <div className="space-y-4 text-charcoal/80">
                 <p className="leading-relaxed">
                   <strong>Métodos de pagamento aceites:</strong>
@@ -135,9 +126,9 @@ const TermsOfService = () => {
               </div>
             </div>
 
-            {/* 7. Propriedade Intelectual */}
+            {/* 6. Propriedade Intelectual */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">7. Propriedade Intelectual</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">6. Propriedade Intelectual</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 Todo o conteúdo do Site, incluindo textos, imagens, logótipos, design, vídeos e software, 
                 é propriedade da Lennure Lux Spa ou dos seus licenciadores e está protegido por direitos de 
@@ -146,9 +137,9 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 8. Limitação de Responsabilidade */}
+            {/* 7. Limitação de Responsabilidade */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">8. Limitação de Responsabilidade</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">7. Limitação de Responsabilidade</h2>
               <div className="space-y-4 text-charcoal/80">
                 <p className="leading-relaxed">
                   A Lennure Lux Spa não se responsabiliza por:
@@ -166,9 +157,9 @@ const TermsOfService = () => {
               </div>
             </div>
 
-            {/* 9. Código de Conduta */}
+            {/* 8. Código de Conduta */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">9. Código de Conduta e Ética</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">8. Código de Conduta e Ética</h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 A Lennure Lux Spa opera com base em princípios de:
               </p>
@@ -183,9 +174,9 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 10. Privacidade */}
+            {/* 9. Privacidade */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">10. Proteção de Dados</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">9. Proteção de Dados</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 O tratamento dos seus dados pessoais é realizado em conformidade com o RGPD e a nossa 
                 <Link to="/politica-privacidade" className="text-gold hover:underline ml-1">
@@ -195,18 +186,18 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 11. Acesso Geográfico */}
+            {/* 10. Acesso Geográfico */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">11. Acesso Geográfico</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">10. Acesso Geográfico</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 Este Site opera exclusivamente em Portugal e na União Europeia. O acesso de outras jurisdições 
                 pode estar limitado por razões de privacidade e conformidade regulatória.
               </p>
             </div>
 
-            {/* 12. Modificações */}
+            {/* 11. Modificações */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">12. Modificações aos Termos</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">11. Modificações aos Termos</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. As alterações 
                 entrarão em vigor imediatamente após a publicação no Site. A utilização continuada após 
@@ -214,18 +205,18 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 13. Rescisão */}
+            {/* 12. Rescisão */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">13. Rescisão de Acesso</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">12. Rescisão de Acesso</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 Podemos suspender ou terminar o seu acesso ao Site, sem aviso prévio, em caso de violação 
                 destes Termos ou comportamento inadequado.
               </p>
             </div>
 
-            {/* 14. Lei Aplicável */}
+            {/* 13. Lei Aplicável */}
             <div>
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">14. Lei Aplicável e Jurisdição</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">13. Lei Aplicável e Jurisdição</h2>
               <p className="text-charcoal/80 leading-relaxed">
                 Estes Termos de Uso são regidos pela lei portuguesa. Qualquer litígio decorrente da utilização 
                 do Site será da competência exclusiva dos tribunais de Lisboa, Portugal, salvo disposição legal 
@@ -233,9 +224,9 @@ const TermsOfService = () => {
               </p>
             </div>
 
-            {/* 15. Contacto */}
+            {/* 14. Contacto */}
             <div className="bg-gold/10 p-6 rounded-lg">
-              <h2 className="font-cormorant text-3xl text-charcoal mb-4">15. Contacto</h2>
+              <h2 className="font-cormorant text-3xl text-charcoal mb-4">14. Contacto</h2>
               <p className="text-charcoal/80 leading-relaxed mb-4">
                 Para questões sobre estes Termos de Uso, contacte-nos:
               </p>
