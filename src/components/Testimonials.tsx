@@ -1,4 +1,11 @@
 import { Star } from "lucide-react";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -48,38 +55,53 @@ const Testimonials = () => {
             </p>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl p-8 shadow-elegant hover:shadow-hover transition-elegant animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-dourado text-dourado" />
-                  ))}
-                </div>
+          {/* Testimonials Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem 
+                  key={index} 
+                  className="pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div 
+                    className="bg-white rounded-2xl p-8 shadow-elegant hover:shadow-hover transition-elegant h-full flex flex-col"
+                  >
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-dourado text-dourado" />
+                      ))}
+                    </div>
 
-                {/* Text */}
-                <p className="text-grafite/80 leading-relaxed mb-6 italic">
-                  "{testimonial.text}"
-                </p>
+                    {/* Text */}
+                    <p className="text-grafite/80 leading-relaxed mb-6 italic flex-grow">
+                      "{testimonial.text}"
+                    </p>
 
-                {/* Author */}
-                <div className="border-t border-perola pt-4">
-                  <p className="font-medium text-grafite">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-grafite/60">
-                    {testimonial.location}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                    {/* Author */}
+                    <div className="border-t border-perola pt-4">
+                      <p className="font-medium text-grafite">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-grafite/60">
+                        {testimonial.location}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            
+            {/* Navigation Buttons */}
+            <CarouselPrevious className="-left-12" />
+            <CarouselNext className="-right-12" />
+          </Carousel>
         </div>
       </div>
     </section>
