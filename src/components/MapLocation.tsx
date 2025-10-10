@@ -79,45 +79,33 @@ const MapLocation = () => {
           {/* Parking Information */}
           <div className="mt-12 mb-8 animate-fade-in-up">
             <div className="bg-gradient-to-br from-gold/10 via-perola/20 to-champagne/10 rounded-2xl p-8 md:p-10 border border-gold/20 shadow-elegant">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg 
-                    className="w-8 h-8 text-gold-dark" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-cormorant text-grafite mb-2 font-bold">
-                    Estacionamento Próximo
-                  </h3>
-                  <p className="text-grafite/80 leading-relaxed mb-4">
-                    Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> do estacionamento.
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-cormorant text-grafite mb-2 font-bold">
+                  Estacionamento Próximo
+                </h3>
+                <p className="text-grafite/80 leading-relaxed mb-4">
+                  Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> do estacionamento.
+                </p>
+                
+                <div className="bg-white/60 rounded-lg p-4 mb-4 border border-gold/10 max-w-2xl mx-auto">
+                  <p className="text-grafite/70 text-sm mb-3">
+                    <strong>Importante:</strong> Recomendamos usar este estacionamento para garantir tranquilidade.
                   </p>
-                  
-                  <div className="bg-white/60 rounded-lg p-4 mb-4 border border-gold/10">
-                    <p className="text-grafite/70 text-sm mb-3">
-                      <strong>Importante:</strong> Recomendamos usar este estacionamento para garantir tranquilidade.
-                    </p>
-                    <p className="text-grafite/60 text-xs italic">
-                      Somente pagamento numerado é aceito no local.
-                    </p>
-                  </div>
-
-                  {/* TODO: Substituir pelo link correto do Google Maps */}
-                  <a
-                    href="https://maps.app.goo.gl/LINK_DO_ESTACIONAMENTO_AQUI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
-                  >
-                    <MapPin className="w-5 h-5" />
-                    Abrir Estacionamento no Google Maps
-                  </a>
+                  <p className="text-grafite/60 text-xs italic">
+                    Somente pagamento numerado é aceito no local.
+                  </p>
                 </div>
+
+                {/* TODO: Substituir pelo link correto do Google Maps */}
+                <a
+                  href="https://maps.app.goo.gl/LINK_DO_ESTACIONAMENTO_AQUI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
+                >
+                  <MapPin className="w-5 h-5" />
+                  Abrir Estacionamento no Google Maps
+                </a>
               </div>
             </div>
           </div>
