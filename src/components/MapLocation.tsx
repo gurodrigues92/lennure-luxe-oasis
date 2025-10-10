@@ -100,7 +100,7 @@ const MapLocation = () => {
                   
                   <div className="bg-white/60 rounded-lg p-4 mb-4 border border-gold/10">
                     <p className="text-grafite/70 text-sm mb-3">
-                      ⚠️ <strong>Importante:</strong> Alguns clientes já relataram dificuldade em encontrar vaga. Recomendamos usar este estacionamento para garantir tranquilidade.
+                      <strong>Importante:</strong> Recomendamos usar este estacionamento para garantir tranquilidade.
                     </p>
                     <p className="text-grafite/60 text-xs italic">
                       Somente pagamento numerado é aceito no local.
