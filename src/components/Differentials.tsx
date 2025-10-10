@@ -60,7 +60,7 @@ const Differentials = () => {
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-medium text-white">
+                  <h3 className="text-lg font-bold text-white">
                     {item.title}
                   </h3>
                   <p className="text-white/90 text-sm">
