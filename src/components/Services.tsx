@@ -1,4 +1,5 @@
 import { Sparkles, Heart, Droplets } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -67,11 +68,11 @@ const Services = () => {
 
           {/* CTA Button */}
           <div className="text-center relative z-10 animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <a 
-              href="https://www.lennureluxspa.com/massagens"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-gold text-white px-8 py-4 rounded-full font-lato font-semibold text-lg shadow-gold hover:scale-105 hover:shadow-xl transition-elegant group"
+            <Button 
+              variant="goldOutline"
+              size="lg"
+              onClick={() => window.open("https://www.lennureluxspa.com/massagens", "_blank")}
+              className="min-w-[250px] group"
             >
               Ver Mais Serviços Oferecidos
               <svg 
@@ -82,7 +83,7 @@ const Services = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
+            </Button>
           </div>
         </div>
       </div>
