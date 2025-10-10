@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl title-gold-gradient mb-4">
+            <h2 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-4">
               Contactos e Horários
             </h2>
             <p className="text-lg text-grafite/70">
