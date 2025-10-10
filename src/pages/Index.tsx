@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import PromoDialog from "@/components/PromoDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { storeUTMParams } from "@/lib/analytics";
 
@@ -74,6 +75,7 @@ const Index = () => {
         <MapLocation />
       </div>
       <Footer />
+      <PromoDialog />
       <FloatingWhatsApp />
     </div>
   );
