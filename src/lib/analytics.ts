@@ -1,5 +1,6 @@
 import type { 
   WhatsAppLocation, 
+  PhoneLocation,
   SectionName, 
   ScrollDepth, 
   TimeOnPage,
@@ -45,6 +46,21 @@ export const trackWhatsAppClick = (
     event_label: location,
     button_text: buttonText,
     phone_number: '351912847526'
+  });
+};
+
+/**
+ * Track phone call button clicks (SECONDARY CONVERSION)
+ */
+export const trackPhoneClick = (
+  location: PhoneLocation,
+  phoneNumber: string
+) => {
+  pushToDataLayer({
+    event: 'phone_click',
+    event_category: 'conversion',
+    event_label: location,
+    phone_number: phoneNumber
   });
 };
 

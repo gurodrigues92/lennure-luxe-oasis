@@ -5,7 +5,11 @@ export type WhatsAppLocation =
   | 'map_section'
   | 'space_section';
 
-export type SectionName = 
+export type PhoneLocation = 
+  | 'contact_section' 
+  | 'map_section';
+
+export type SectionName =
   | 'about_section'
   | 'services_section'
   | 'space_section'
@@ -30,6 +34,13 @@ export interface WhatsAppClickEvent extends GTMEvent {
   event_category: 'conversion';
   event_label: WhatsAppLocation;
   button_text: string;
+  phone_number: string;
+}
+
+export interface PhoneClickEvent extends GTMEvent {
+  event: 'phone_click';
+  event_category: 'conversion';
+  event_label: PhoneLocation;
   phone_number: string;
 }
 

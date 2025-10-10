@@ -1,6 +1,6 @@
 import { Phone, MapPin } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import { trackWhatsAppClick } from "@/lib/analytics";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 const MapLocation = () => {
   const handleWhatsAppClick = (e: React.MouseEvent) => {
@@ -49,6 +49,7 @@ const MapLocation = () => {
               href="tel:+351215862245"
               className="flex flex-col items-center gap-3 p-6 bg-background rounded-2xl border border-transparent hover:border-gold hover:shadow-gold transition-elegant group"
               aria-label="Ligar para o Lennure Lux Spa"
+              onClick={() => trackPhoneClick('map_section', '+351215862245')}
             >
               <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
                 <Phone className="w-8 h-8 text-white" />

@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Clock, CreditCard } from "lucide-react";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { trackWhatsAppClick } from "@/lib/analytics";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
@@ -52,7 +52,11 @@ const Contact = () => {
               <div>
                 <h3 className="font-medium text-grafite mb-1">Telefone</h3>
                 <p className="text-grafite/70">
-                  <a href="tel:+351215862245" className="hover:text-gold transition-colors">
+                  <a 
+                    href="tel:+351215862245" 
+                    className="hover:text-gold transition-colors"
+                    onClick={() => trackPhoneClick('contact_section', '+351215862245')}
+                  >
                     +351 21 586 2245
                   </a>
                   <br />

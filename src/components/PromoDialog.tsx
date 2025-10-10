@@ -23,13 +23,6 @@ const PromoDialog = () => {
     localStorage.setItem("hasSeenInaugurationPromo", "true");
   };
 
-  const handleCTA = () => {
-    handleClose();
-    // Scroll suave até seção de contato
-    const contactSection = document.querySelector('[data-section="contact_section"]');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="max-w-md w-[90vw] sm:w-full bg-[#F5E8DA] border-gold/20 p-0 overflow-hidden rounded-2xl" hideCloseButton>
@@ -75,13 +68,13 @@ const PromoDialog = () => {
           <GradientButton
             variant="gold"
             className="w-full"
-            onClick={handleCTA}
+            onClick={handleClose}
           >
-            Marcar Sessão
+            Acessar o Site
           </GradientButton>
 
           <p className="text-xs text-charcoal/60 text-center font-lato">
-            Agende agora e receba o seu cartão!
+            Explore nossos serviços e conheça o Lennure Lux Spa
           </p>
         </div>
       </DialogContent>
