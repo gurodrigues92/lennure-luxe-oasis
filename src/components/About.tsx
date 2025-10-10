@@ -19,7 +19,7 @@ const About = () => {
 
           {/* Content */}
           <div className="space-y-6 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight bg-gradient-gold bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight title-gold-gradient">
               Um refúgio de bem-estar no centro de Lisboa
             </h2>
             

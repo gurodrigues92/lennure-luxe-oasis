@@ -41,7 +41,7 @@ const Space = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold title-gold-gradient mb-4">
               Nosso Espaço
             </h2>
             <p className="text-lg text-grafite/70 max-w-2xl mx-auto">
