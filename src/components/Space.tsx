@@ -103,29 +103,8 @@ const Space = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col items-center mt-16 space-y-8">
-            {/* Therapist Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-2xl">
-              <Button 
-                variant="goldOutline" 
-                size="lg"
-                onClick={() => window.open("https://lennure.pt/terapeutas-femininas", "_blank")}
-                className="flex-1 min-w-[200px]"
-              >
-                Ver Terapeutas Femininas
-              </Button>
-              <Button 
-                variant="goldOutline" 
-                size="lg"
-                onClick={() => window.open("https://lennure.pt/terapeutas-masculinos", "_blank")}
-                className="flex-1 min-w-[200px]"
-              >
-                Ver Terapeutas Masculinos
-              </Button>
-            </div>
-
-            {/* Visit CTA */}
+          {/* Visit CTA */}
+          <div className="flex flex-col items-center mt-16">
             <div className="text-center space-y-4 max-w-md">
               <p className="text-lg text-grafite/70">
                 Quer conhecer pessoalmente nosso espaço?
