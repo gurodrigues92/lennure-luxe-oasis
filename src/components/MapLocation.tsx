@@ -18,7 +18,7 @@ const MapLocation = () => {
   };
 
   return (
-    <section className="bg-perola/30 py-16">
+    <section className="bg-perola/30 pt-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 animate-fade-in">
