@@ -92,7 +92,7 @@ const MapLocation = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl md:text-3xl font-cormorant text-grafite mb-2 font-bold">
-                    🚗 Estacionamento Próximo
+                    Estacionamento Próximo
                   </h3>
                   <p className="text-grafite/80 leading-relaxed mb-4">
                     Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> de um estacionamento pago.
