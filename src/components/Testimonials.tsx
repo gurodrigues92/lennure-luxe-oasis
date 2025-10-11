@@ -106,7 +106,7 @@ const Testimonials = () => {
           {/* Google Reviews Button */}
           <div className="text-center mt-12 animate-fade-in">
             <a
-              href="https://maps.app.goo.gl/URL_DO_PERFIL_GOOGLE_AQUI"
+              href="https://share.google/xG5SjK3YasJRDNyzt"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dourado via-dourado to-dourado/90 hover:from-dourado/90 hover:to-dourado text-white rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
