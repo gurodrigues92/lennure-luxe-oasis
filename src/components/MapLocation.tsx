@@ -92,7 +92,7 @@ const MapLocation = () => {
                     <strong>Importante:</strong> Recomendamos usar este estacionamento para garantir tranquilidade.
                   </p>
                   <p className="text-grafite/60 text-xs italic">
-                    Somente pagamento numerado é aceito no local.
+                    Somente pagamento numerário é aceito no local.
                   </p>
                 </div>
 
