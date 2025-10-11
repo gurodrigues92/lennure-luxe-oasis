@@ -6,7 +6,7 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 
 const spaces = [
   {
-    name: "Sala de Massagem",
+    name: "Gabinete de Atendimento",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_j28qs0.jpg",
     description: "Conforto e tranquilidade em cada detalhe"
   },
@@ -16,7 +16,7 @@ const spaces = [
     description: "Boas-vindas num ambiente acolhedor e discreto"
   },
   {
-    name: "Recepção",
+    name: "Receção",
     image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.56_oahrl8.jpg",
     description: "Atendimento elegante e profissional"
   },
