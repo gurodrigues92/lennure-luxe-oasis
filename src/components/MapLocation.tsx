@@ -98,7 +98,7 @@ const MapLocation = () => {
 
                 {/* TODO: Substituir pelo link correto do Google Maps */}
                 <a
-                  href="https://maps.app.goo.gl/LINK_DO_ESTACIONAMENTO_AQUI"
+                  href="https://www.google.com/maps/place/Estacionamento+Jardim+do+Carregal/@38.7375167,-9.148795,17z/data=!3m1!4b1!4m6!3m5!1s0xd19330bcc2d1f47:0x19cc00a260e6e661!8m2!3d38.7375167!4d-9.148795!16s%2Fg%2F11cmytc398?entry=tts&g_ep=EgoyMDI1MDkxNy4wIPu8ASoASAFQAw%3D%3D&skid=0ea874e6-617a-4e43-925b-180b984aee1e"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
