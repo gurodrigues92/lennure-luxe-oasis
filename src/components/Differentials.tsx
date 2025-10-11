@@ -77,7 +77,7 @@ const Differentials = () => {
             <Button 
               variant="outline"
               size="lg"
-              onClick={() => window.open("https://lennure.pt/terapeutas-femininas", "_blank")}
+              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-femininas", "_blank")}
               className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
               <span className="flex flex-col items-center gap-1 leading-tight">
@@ -88,7 +88,7 @@ const Differentials = () => {
             <Button 
               variant="outline"
               size="lg"
-              onClick={() => window.open("https://lennure.pt/terapeutas-masculinos", "_blank")}
+              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-masculinos", "_blank")}
               className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
               <span className="flex flex-col items-center gap-1 leading-tight">
