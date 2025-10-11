@@ -40,7 +40,7 @@ const Philosophy = () => {
             <div className="w-16 h-1 bg-dourado mx-auto"></div>
             
             <blockquote className="text-xl md:text-2xl font-cormorant text-grafite/90 leading-relaxed italic">
-              "Cada sessão é um convite à pausa, à escuta do corpo e ao reencontro com o essencial."
+              "Cada sessão é um convite a pausa, a escuta do corpo e ao reencontro com o essencial."
             </blockquote>
             
             <div className="w-16 h-1 bg-dourado mx-auto"></div>
