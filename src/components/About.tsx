@@ -25,18 +25,7 @@ const About = () => {
             
             <div className="space-y-4 text-grafite/80 text-lg leading-relaxed">
               <p>
-                O <span className="font-medium text-grafite">Lennure Lux Spa</span>, localizado no coração de Lisboa, 
-                é um refúgio de bem-estar onde a privacidade é sagrada.
-              </p>
-              
-              <p>
-                Cada gabinete possui duche privativo, enxoval individual e segue protocolos rigorosos 
-                de higiene — para que o cuidado comece antes mesmo do toque.
-              </p>
-              
-              <p>
-                Sessões totalmente personalizadas e atendimento sem sobreposição garantem que cada momento 
-                seja vivido com presença, silêncio e dedicação exclusiva.
+                O <span className="font-medium text-grafite">Lennure Lux Spa</span>, localizado no centro de Lisboa, é um refúgio de bem‑estar com privacidade total. Recebemos com marcação prévia, mas também pode bater à porta para efetuar a sua reserva no momento, mediante disponibilidade. Os nossos gabinetes têm duche privativo, enxoval individual e protocolos de higiene rigorosos. Experiências personalizadas e equipa qualificada.
               </p>
             </div>
 
