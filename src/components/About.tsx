@@ -7,8 +7,8 @@ const About = () => {
           <div className="relative animate-fade-in">
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
               <img 
-                src="https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_j28qs0.jpg" 
-                alt="Interior do Lennure Lux Spa" 
+                src="https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366196/Refugio_3_ynxljb.jpg" 
+                alt="Interior do Lennure Lux Spa"
                 className="w-full h-full object-cover hover:scale-105 transition-elegant"
                 loading="lazy"
               />
