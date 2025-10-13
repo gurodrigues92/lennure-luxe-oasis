@@ -7,7 +7,7 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 const spaces = [
   {
     name: "Gabinete de Atendimento",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_j28qs0.jpg",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/gabinete_owiwzo.jpg",
     description: "Conforto e tranquilidade em cada detalhe"
   },
   {
@@ -17,12 +17,12 @@ const spaces = [
   },
   {
     name: "Receção",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.56_oahrl8.jpg",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/recec%CC%A7a%CC%83o_sf6cf5.jpg",
     description: "Atendimento elegante e profissional"
   },
   {
     name: "Casa de Banho",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.42.46_1_wohnwm.jpg",
+    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/casa_de_banho_g5huse.jpg",
     description: "Higiene impecável e cuidado em cada detalhe"
   }
 ];
