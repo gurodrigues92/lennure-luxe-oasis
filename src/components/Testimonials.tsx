@@ -6,6 +6,7 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const testimonials = [
   {
@@ -41,6 +42,8 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-24 bg-gradient-to-b from-champagne/30 to-background">
       <div className="container mx-auto px-4">
@@ -48,10 +51,10 @@ const Testimonials = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold title-gold-gradient mb-4">
-              O Que Dizem os Nossos Clientes
+              {t('testimonials.title')}
             </h2>
             <p className="text-lg text-grafite/70">
-              Experiências de quem já nos visitou
+              {t('testimonials.subtitle')}
             </p>
           </div>
 
@@ -112,7 +115,7 @@ const Testimonials = () => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dourado via-dourado to-dourado/90 hover:from-dourado/90 hover:to-dourado text-white rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               <Star className="w-5 h-5 fill-white" />
-              <span>Ver Mais Avaliações no Google</span>
+              <span>{t('testimonials.cta')}</span>
             </a>
           </div>
         </div>

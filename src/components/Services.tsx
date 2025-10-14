@@ -1,25 +1,27 @@
 import { Sparkles, Heart, Droplets } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    icon: Sparkles,
-    title: "Massagem Relaxante",
-    description: "Alívio de tensões, leveza e equilíbrio físico através de técnicas especializadas."
-  },
-  {
-    icon: Heart,
-    title: "Terapia de Bem-estar",
-    description: "Sessões personalizadas com foco em relaxamento profundo e presença consciente."
-  },
-  {
-    icon: Droplets,
-    title: "Reflexologia e Drenagem",
-    description: "Técnicas que ativam a circulação, estimulam o corpo e promovem renovação."
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
+  const services = [
+    {
+      icon: Sparkles,
+      title: t('services.massage'),
+      description: t('services.massageDesc')
+    },
+    {
+      icon: Heart,
+      title: t('services.relaxation'),
+      description: t('services.relaxationDesc')
+    },
+    {
+      icon: Droplets,
+      title: t('services.personalized'),
+      description: t('services.personalizedDesc')
+    }
+  ];
   return (
     <section className="py-24 bg-gradient-to-br from-gold-light/20 via-cream/40 to-gold/10 relative overflow-hidden">
       {/* Elementos decorativos de fundo */}
@@ -33,10 +35,10 @@ const Services = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in relative z-10">
             <h2 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-4">
-              Serviços Oferecidos
+              {t('services.title')}
             </h2>
             <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">
-              Cada experiência é desenhada para o seu bem-estar integral
+              {t('services.subtitle')}
             </p>
             {/* Linha decorativa dourada */}
             <div className="w-24 h-1 bg-gradient-gold mx-auto mt-6 rounded-full" />
@@ -74,7 +76,7 @@ const Services = () => {
               onClick={() => window.open("https://www.lennureluxspa.com/massagens", "_blank")}
               className="min-w-[250px] group"
             >
-              Ver Mais Serviços Oferecidos
+              {t('services.cta')}
               <svg 
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform" 
                 fill="none" 

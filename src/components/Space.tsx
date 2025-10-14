@@ -3,35 +3,39 @@ import { GradientButton } from "@/components/ui/gradient-button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Maximize2 } from "lucide-react";
 import { trackWhatsAppClick } from "@/lib/analytics";
-
-const spaces = [
-  {
-    name: "Gabinete de Atendimento",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/gabinete_owiwzo.jpg",
-    description: "Conforto e tranquilidade em cada detalhe"
-  },
-  {
-    name: "Sala de Espera",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.55_rkrws2.jpg",
-    description: "Boas-vindas num ambiente acolhedor e discreto"
-  },
-  {
-    name: "Receção",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/recec%CC%A7a%CC%83o_sf6cf5.jpg",
-    description: "Atendimento elegante e profissional"
-  },
-  {
-    name: "Casa de Banho",
-    image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/casa_de_banho_g5huse.jpg",
-    description: "Higiene impecável e cuidado em cada detalhe"
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Space = () => {
+  const { t } = useLanguage();
+  
+  const spaces = [
+    {
+      name: t('space.cabinet'),
+      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/gabinete_owiwzo.jpg",
+      description: t('space.cabinetDesc')
+    },
+    {
+      name: t('space.waiting'),
+      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.55_rkrws2.jpg",
+      description: t('space.waitingDesc')
+    },
+    {
+      name: t('space.reception'),
+      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/recec%CC%A7a%CC%83o_sf6cf5.jpg",
+      description: t('space.receptionDesc')
+    },
+    {
+      name: t('space.bathroom'),
+      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/casa_de_banho_g5huse.jpg",
+      description: t('space.bathroomDesc')
+    }
+  ];
+  
   const handleWhatsAppClick = () => {
-    trackWhatsAppClick('space_section', 'Agendar Visita');
+    trackWhatsAppClick('space_section', t('space.cta'));
     setTimeout(() => {
-      window.open("https://wa.me/351912847526", "_blank");
+      const message = t('whatsapp.message');
+      window.open(`https://wa.me/351912847526?text=${encodeURIComponent(message)}`, "_blank");
     }, 300);
   };
 
@@ -42,10 +46,10 @@ const Space = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold title-gold-gradient mb-4">
-              Nosso Espaço
+              {t('space.title')}
             </h2>
             <p className="text-lg text-grafite/70 max-w-2xl mx-auto">
-              Ambientes elegantes, pensados para o seu conforto e privacidade
+              {t('space.subtitle')}
             </p>
           </div>
 
@@ -106,15 +110,12 @@ const Space = () => {
           {/* Visit CTA */}
           <div className="flex flex-col items-center mt-16">
             <div className="text-center space-y-4 max-w-md">
-              <p className="text-lg text-grafite/70">
-                Quer conhecer pessoalmente nosso espaço?
-              </p>
               <GradientButton 
                 variant="gold"
                 className="min-w-[250px] text-lg px-10 py-4"
                 onClick={handleWhatsAppClick}
               >
-                Agendar Visita
+                {t('space.cta')}
               </GradientButton>
             </div>
           </div>

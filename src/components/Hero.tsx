@@ -1,14 +1,18 @@
 import { GradientButton } from "@/components/ui/gradient-button";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const handleWhatsAppClick = () => {
     // Track conversion event
-    trackWhatsAppClick('hero_cta', 'Marcar Sessão Agora');
+    trackWhatsAppClick('hero_cta', t('hero.cta'));
     
     // 300ms delay to ensure event is sent
     setTimeout(() => {
-      window.open("https://wa.me/351912847526", "_blank");
+      const message = t('whatsapp.message');
+      window.open(`https://wa.me/351912847526?text=${encodeURIComponent(message)}`, "_blank");
     }, 300);
   };
 
@@ -34,16 +38,15 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-light leading-tight">
             <span className="text-gradient-gold">
-              Bem-estar e experiência sensorial
+              {t('hero.title')}
             </span>
             <span className="block text-4xl md:text-6xl mt-4 text-gold">
-              no coração de Lisboa
+              {t('hero.subtitle')}
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-grafite/80 max-w-3xl mx-auto leading-relaxed font-light">
-            Gabinetes privativos, atendimento personalizado e ambiente silencioso — um refúgio de equilíbrio 
-            e conforto onde cada detalhe é pensado para si.
+            {t('hero.description')}
           </p>
 
           <div className="pt-8">
@@ -52,7 +55,7 @@ const Hero = () => {
               onClick={handleWhatsAppClick}
               className="text-lg px-12 py-6 animate-glow-pulse"
             >
-              Marcar Sessão Agora
+              {t('hero.cta')}
             </GradientButton>
           </div>
         </div>

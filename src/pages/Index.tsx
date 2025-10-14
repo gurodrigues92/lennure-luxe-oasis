@@ -11,6 +11,7 @@ import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import PromoDialog from "@/components/PromoDialog";
+import LanguageSelector from "@/components/LanguageSelector";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { storeUTMParams } from "@/lib/analytics";
 
@@ -49,6 +50,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <LanguageSelector />
       <Hero />
       <div ref={aboutRef} data-section="about_section">
         <About />

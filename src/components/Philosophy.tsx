@@ -1,13 +1,16 @@
 import React from 'react';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Philosophy = () => {
+  const { t } = useLanguage();
+  
   const values = [
-    "Presença",
-    "Respeito",
-    "Privacidade",
-    "Qualidade",
-    "Personalização",
-    "Elegância"
+    t('philosophy.values.presence'),
+    t('philosophy.values.respect'),
+    t('philosophy.values.privacy'),
+    t('philosophy.values.quality'),
+    t('philosophy.values.personalization'),
+    t('philosophy.values.elegance')
   ];
 
   return (
@@ -40,7 +43,7 @@ const Philosophy = () => {
             <div className="w-16 h-1 bg-dourado mx-auto"></div>
             
             <blockquote className="text-xl md:text-2xl font-cormorant text-grafite/90 leading-relaxed italic">
-              "Cada sessão é um convite a pausa, a escuta do corpo e ao reencontro com o essencial."
+              "{t('philosophy.quote')}"
             </blockquote>
             
             <div className="w-16 h-1 bg-dourado mx-auto"></div>
@@ -48,8 +51,7 @@ const Philosophy = () => {
 
           {/* Philosophy text */}
           <p className="text-lg text-grafite/70 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
-            No Lennure Lux Spa, acreditamos que o bem-estar verdadeiro nasce do equilíbrio entre 
-            corpo e mente, da atenção aos detalhes e do respeito absoluto pela individualidade de cada pessoa.
+            {t('philosophy.description')}
           </p>
         </div>
       </div>

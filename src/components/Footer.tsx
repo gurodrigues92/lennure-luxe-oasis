@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-charcoal text-white py-12">
       <div className="container mx-auto px-4">
@@ -14,27 +17,27 @@ const Footer = () => {
                 className="h-16 w-auto brightness-0 invert"
               />
               <p className="text-white/70 text-sm leading-relaxed">
-                Bem-estar e experiência sensorial
+                {t('footer.description')}
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-cormorant text-lg mb-4">Informações</h3>
+              <h3 className="font-cormorant text-lg mb-4">{t('footer.title')}</h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link to="/politica-privacidade" className="text-white/70 hover:text-white transition-colors">
-                    Política de Privacidade
+                    {t('footer.privacy')}
                   </Link>
                 </li>
                 <li>
                   <Link to="/termos-uso" className="text-white/70 hover:text-white transition-colors">
-                    Termos de Uso
+                    {t('footer.terms')}
                   </Link>
                 </li>
                 <li>
                   <Link to="/politica-cancelamento" className="text-white/70 hover:text-white transition-colors">
-                    Política de Cancelamento
+                    {t('footer.cancellation')}
                   </Link>
                 </li>
               </ul>
@@ -45,22 +48,12 @@ const Footer = () => {
           <div className="border-t border-white/10 pt-8 mb-8">
             <div className="bg-white/5 rounded-lg p-6 space-y-3">
               <h4 className="font-cormorant text-lg text-gold-light mb-3">
-                Informações Importantes
+                {t('footer.institutional')}
               </h4>
               
               <div className="space-y-2 text-sm text-white/70 leading-relaxed">
                 <p>
-                  Este site tem acesso limitado a determinados países por motivos de{" "}
-                  <span className="text-white/90 font-medium">privacidade e regulamentação</span>.
-                </p>
-                <p>
-                  Todos os serviços são oferecidos com base em critérios de{" "}
-                  <span className="text-white/90 font-medium">bem-estar</span>,{" "}
-                  <span className="text-white/90 font-medium">ética profissional</span> e{" "}
-                  <span className="text-white/90 font-medium">privacidade do cliente</span>.
-                </p>
-                <p>
-                  <strong className="text-white/90">Pagamentos aceites:</strong> Numerário, Cartão (Visa/Mastercard), Transferência ou MBWay.
+                  {t('footer.institutionalText')}
                 </p>
               </div>
             </div>
@@ -68,7 +61,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="border-t border-white/10 pt-8 text-center text-sm text-white/60">
-            <p>© {new Date().getFullYear()} Lennure Lux Spa · Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Lennure Lux Spa · {t('footer.copyright')}</p>
           </div>
         </div>
       </div>
