@@ -16,7 +16,7 @@ const Space = () => {
     },
     {
       name: t('space.waiting'),
-      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760040792/WhatsApp_Image_2025-10-09_at_16.46.55_rkrws2.jpg",
+      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760433848/Salade_Espera_1_trln50.jpg",
       description: t('space.waitingDesc')
     },
     {
