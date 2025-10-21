@@ -74,11 +74,11 @@ export const pt = {
   contact: {
     title: "Contactos e Horários",
     location: "Localização",
-    locationValue: "Alameda Dom Afonso Henriques 51-B, Lisboa",
+    locationValue: "Avenida 5 de Outubro, nº 68 — Sala 5G, Centro de Lisboa",
     phone: "Telefone",
     phoneValue: "+351 912 847 526",
     email: "E-mail",
-    emailValue: "geral@lennureluxspa.com",
+    emailValue: "lennureluxspa@icloud.com",
     hours: "Horário de Funcionamento",
     payment: "Formas de Pagamento",
     paymentValue: "Dinheiro, MBWay, Transferência Bancária",
@@ -89,8 +89,8 @@ export const pt = {
     },
     schedule: {
       weekdays: "10h - 22h",
-      saturday: "10h - 20h",
-      sunday: "Fechado"
+      saturday: "12h - 22h",
+      sunday: "13h - 21h"
     },
     cta: "Falar no WhatsApp",
     callNow: "Ligar Agora"

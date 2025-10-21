@@ -40,8 +40,8 @@ const MapLocation = () => {
               </div>
               <h3 className="font-medium text-grafite text-center">Localização</h3>
               <p className="text-grafite/70 text-center text-sm">
-                Avenida 5 de Outubro, nº 68<br />
-                Sala 5G, Centro de Lisboa
+                Avenida 5 de Outubro, nº 68 — Sala 5G<br />
+                Centro de Lisboa
               </p>
             </a>
 
