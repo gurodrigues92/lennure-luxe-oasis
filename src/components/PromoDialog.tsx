@@ -7,20 +7,14 @@ const PromoDialog = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Verifica se já foi exibido
-    const hasSeenPromo = localStorage.getItem("hasSeenInaugurationPromo");
-    
-    if (!hasSeenPromo) {
-      // Delay de 2 segundos para exibição
-      setTimeout(() => {
-        setOpen(true);
-      }, 2000);
-    }
+    // Delay de 2 segundos para exibição
+    setTimeout(() => {
+      setOpen(true);
+    }, 2000);
   }, []);
 
   const handleClose = () => {
     setOpen(false);
-    localStorage.setItem("hasSeenInaugurationPromo", "true");
   };
 
   return (
