@@ -34,7 +34,7 @@ export const AdminSetup = () => {
     try {
       const { data, error } = await supabase.functions.invoke('setup-admin', {
         body: {
-          email: 'admin@lennure.com',
+          email: 'gurodrigues92@gmail.com',
           password: 'AdminLennure123!',
           name: 'Administrador Lennure',
         },
@@ -85,7 +85,7 @@ export const AdminSetup = () => {
             {loading ? 'Criando...' : 'Criar Admin'}
           </Button>
           <p className="text-xs text-muted-foreground mt-2">
-            Email: admin@lennure.com<br />
+            Email: gurodrigues92@gmail.com<br />
             Senha: AdminLennure123!
           </p>
         </CardContent>

@@ -71,7 +71,7 @@ const Login = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@lennure.com"
+                placeholder="gurodrigues92@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
@@ -102,7 +102,7 @@ const Login = () => {
           
           <div className="mt-6 text-center text-sm text-muted-foreground">
             <p>Credenciais de teste:</p>
-            <p className="font-mono">admin@lennure.com / AdminLennure123!</p>
+            <p className="font-mono">gurodrigues92@gmail.com / AdminLennure123!</p>
           </div>
         </CardContent>
       </Card>
