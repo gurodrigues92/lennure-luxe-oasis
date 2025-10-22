@@ -12,7 +12,6 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import PromoDialog from "@/components/PromoDialog";
 import LanguageSelector from "@/components/LanguageSelector";
-import { AdminSetup } from "@/components/AdminSetup";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { storeUTMParams } from "@/lib/analytics";
 
@@ -80,7 +79,6 @@ const Index = () => {
       <Footer />
       <PromoDialog />
       <FloatingWhatsApp />
-      <AdminSetup />
     </div>
   );
 };
