@@ -12,6 +12,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import ContentEditor from "./pages/admin/ContentEditor";
 import ImageManager from "./pages/admin/ImageManager";
 import History from "./pages/admin/History";
+import VisualEditor from "./pages/admin/VisualEditor";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -60,6 +61,14 @@ const App = () => (
                   element={
                     <ProtectedRoute requireAdmin>
                       <History />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/admin/visual-editor" 
+                  element={
+                    <ProtectedRoute requireAdmin>
+                      <VisualEditor />
                     </ProtectedRoute>
                   } 
                 />

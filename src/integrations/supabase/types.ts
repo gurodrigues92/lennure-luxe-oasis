@@ -130,6 +130,57 @@ export type Database = {
           },
         ]
       }
+      site_layout: {
+        Row: {
+          created_at: string | null
+          id: string
+          layout_data: Json
+          updated_at: string | null
+          updated_by: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          layout_data?: Json
+          updated_at?: string | null
+          updated_by?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          layout_data?: Json
+          updated_at?: string | null
+          updated_by?: string | null
+        }
+        Relationships: []
+      }
+      site_styles: {
+        Row: {
+          created_at: string | null
+          element_id: string
+          id: string
+          styles: Json
+          updated_at: string | null
+          updated_by: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          element_id: string
+          id?: string
+          styles?: Json
+          updated_at?: string | null
+          updated_by?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          element_id?: string
+          id?: string
+          styles?: Json
+          updated_at?: string | null
+          updated_by?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null

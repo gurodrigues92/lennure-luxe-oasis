@@ -14,8 +14,11 @@ import PromoDialog from "@/components/PromoDialog";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { storeUTMParams } from "@/lib/analytics";
+import { useLayout } from "@/hooks/useLayout";
 
 const Index = () => {
+  const { sections, loading } = useLayout();
+  
   // Create refs for section tracking
   const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -48,34 +51,46 @@ const Index = () => {
     }
   });
 
+  // Section component mapping
+  const sectionComponents: Record<string, { component: JSX.Element; ref: React.RefObject<HTMLDivElement> }> = {
+    hero: { component: <Hero />, ref: { current: null } },
+    about: { component: <About />, ref: aboutRef },
+    services: { component: <Services />, ref: servicesRef },
+    differentials: { component: <Differentials />, ref: differentialsRef },
+    space: { component: <Space />, ref: spaceRef },
+    testimonials: { component: <Testimonials />, ref: testimonialsRef },
+    philosophy: { component: <Philosophy />, ref: philosophyRef },
+    contact: { component: <Contact />, ref: contactRef },
+  };
+
+  if (loading) {
+    return <div className="min-h-screen flex items-center justify-center">Carregando...</div>;
+  }
+
   return (
     <div className="min-h-screen">
       <LanguageSelector />
-      <Hero />
-      <div ref={aboutRef} data-section="about_section">
-        <About />
-      </div>
-      <div ref={servicesRef} data-section="services_section">
-        <Services />
-      </div>
-      <div ref={spaceRef} data-section="space_section">
-        <Space />
-      </div>
-      <div ref={differentialsRef} data-section="differentials_section">
-        <Differentials />
-      </div>
-      <div ref={testimonialsRef} data-section="testimonials_section">
-        <Testimonials />
-      </div>
-      <div ref={philosophyRef} data-section="philosophy_section">
-        <Philosophy />
-      </div>
-      <div ref={contactRef} data-section="contact_section">
-        <Contact />
-      </div>
-      <div ref={mapRef} data-section="map_section">
+      
+      {sections.map((sectionKey) => {
+        const section = sectionComponents[sectionKey];
+        if (!section) return null;
+
+        // Hero doesn't need a wrapper with ref
+        if (sectionKey === 'hero') {
+          return <div key={sectionKey} data-section="hero">{section.component}</div>;
+        }
+
+        return (
+          <div key={sectionKey} ref={section.ref} data-section={`${sectionKey}_section`} id={sectionKey}>
+            {section.component}
+          </div>
+        );
+      })}
+
+      <div ref={mapRef} data-section="map_section" id="map">
         <MapLocation />
       </div>
+      
       <Footer />
       <PromoDialog />
       <FloatingWhatsApp />

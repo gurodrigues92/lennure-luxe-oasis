@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { LogOut, FileEdit, Image, History, Eye } from 'lucide-react';
+import { LogOut, FileEdit, Image, History, Eye, Palette } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Dashboard = () => {
@@ -51,6 +51,26 @@ const Dashboard = () => {
 
         {/* Action Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card 
+            className="hover:shadow-lg transition-shadow cursor-pointer border-primary/20"
+            onClick={() => navigate('/admin/visual-editor')}
+          >
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+                <Palette className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle>Editor Visual</CardTitle>
+              <CardDescription>
+                Edite o site visualmente com arrastar e soltar
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button className="w-full" variant="outline">
+                Abrir Editor Visual
+              </Button>
+            </CardContent>
+          </Card>
+
           <Card 
             className="hover:shadow-lg transition-shadow cursor-pointer border-primary/20"
             onClick={() => navigate('/admin/content')}
