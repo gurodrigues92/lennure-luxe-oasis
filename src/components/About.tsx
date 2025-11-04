@@ -47,6 +47,19 @@ const About = () => {
                 <span className="text-sm text-grafite/70">{t('about.exclusive')}</span>
               </div>
             </div>
+
+            {/* Mensagem pessoal da CEO */}
+            <div className="mt-8 pt-8 border-t border-gold/20">
+              <p className="text-grafite/70 text-base leading-relaxed italic">
+                "{t('about.personalMessage')}
+                <br/><br/>
+                {t('about.personalMessageCta')}"
+              </p>
+              <p className="mt-4 text-gold-dark font-cormorant text-lg font-semibold">
+                {t('about.signature')}<br/>
+                {t('about.ceo')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

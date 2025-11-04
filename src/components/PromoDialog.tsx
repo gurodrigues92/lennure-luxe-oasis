@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { GradientButton } from "@/components/ui/gradient-button";
 import { X, Sparkles } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const PromoDialog = () => {
   const [open, setOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Delay de 2 segundos para exibição
@@ -33,43 +34,36 @@ const PromoDialog = () => {
         <div className="bg-gradient-gold text-white p-6 text-center">
           <Sparkles className="w-12 h-12 mx-auto mb-3 animate-pulse" />
           <h2 className="font-cormorant text-3xl font-bold">
-            Promoção de Inauguração
+            Novembro Especial Black Friday
           </h2>
         </div>
 
         {/* Conteúdo */}
-        <div className="p-6 space-y-4">
-          <p className="font-lato text-charcoal/90 leading-relaxed text-center">
-            Ganhe <strong className="text-gold-dark">10% de desconto</strong> na sua{" "}
-            <strong>1ª e 9ª visita</strong> + um{" "}
-            <strong className="text-gold-dark">shower exclusivo</strong> ao completar o seu{" "}
-            <strong>Cartão Fidelidade</strong>.
-          </p>
-
-          {/* Badges informativos */}
-          <div className="space-y-2 bg-white/50 rounded-lg p-4">
-            <div className="flex items-center gap-2 text-sm text-charcoal/80">
-              <span className="text-gold">✔️</span>
-              <span>Oferta válida por tempo limitado</span>
+        <div className="p-6">
+          {isMobile ? (
+            // Versão Mobile
+            <p className="font-lato text-charcoal/90 leading-relaxed text-center">
+              🌿 Novembro Especial Black Friday:<br/>
+              10% de desconto na primeira massagem<br/>
+              e shower grátis para clientes durante todo o mês.
+              <br/><br/>
+              💆‍♀️ Reserve já o seu momento de relaxamento.
+            </p>
+          ) : (
+            // Versão Desktop
+            <div className="space-y-4">
+              <h3 className="font-cormorant text-2xl font-semibold text-center text-charcoal">
+                ✨ Novembro Especial da Black Friday no Lennure Lux Spa ✨
+              </h3>
+              <p className="font-lato text-charcoal/90 leading-relaxed text-center">
+                A promoção continua!<br/>
+                Aproveite <strong className="text-gold-dark">10% de desconto</strong> na sua primeira massagem<br/>
+                e, se você já é nosso cliente, receba <strong className="text-gold-dark">shower gratuito</strong> em todas as sessões durante o mês de novembro.
+                <br/><br/>
+                🌿 Viva uma experiência completa de relaxamento e bem-estar.
+              </p>
             </div>
-            <div className="flex items-center gap-2 text-sm text-charcoal/80">
-              <span className="text-gold">📍</span>
-              <span>Disponível apenas para clientes em Lisboa</span>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <GradientButton
-            variant="gold"
-            className="w-full"
-            onClick={handleClose}
-          >
-            Acessar o Site
-          </GradientButton>
-
-          <p className="text-xs text-charcoal/60 text-center font-lato">
-            Explore nossos serviços e conheça o Lennure Lux Spa
-          </p>
+          )}
         </div>
       </DialogContent>
     </Dialog>

@@ -10,7 +10,11 @@ export const pt = {
     description: "Instalações modernas e climatizadas, com duas casas de banho privativas e duche. Ambiente preparado para garantir privacidade, higiene rigorosa e um atendimento exclusivo, onde pode relaxar em total tranquilidade.",
     privacy: "Privacidade Total",
     hygiene: "Higiene Rigorosa",
-    exclusive: "Atendimento Exclusivo"
+    exclusive: "Atendimento Exclusivo",
+    personalMessage: "O Lennure Lux Spa foi criado com muito carinho, pensado em cada detalhe para proporcionar momentos únicos de bem-estar e conexão. Cada ambiente, cada aroma e cada toque foram cuidadosamente escolhidos para atender às suas necessidades e oferecer uma experiência verdadeiramente especial.",
+    personalMessageCta: "Venha conhecer pessoalmente — tenho certeza de que vai se encantar.",
+    signature: "Com amor e dedicação,",
+    ceo: "L. S. – CEO do Lennure Lux Spa"
   },
   services: {
     title: "Serviços Oferecidos",
