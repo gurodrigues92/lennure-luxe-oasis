@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PromoDialog = () => {
   const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { t } = useLanguage();
 
   useEffect(() => {
     // Delay de 2 segundos para exibição
@@ -34,7 +36,7 @@ const PromoDialog = () => {
         <div className="bg-gradient-gold text-white p-6 text-center">
           <Sparkles className="w-12 h-12 mx-auto mb-3 animate-pulse" />
           <h2 className="font-cormorant text-3xl font-bold">
-            Novembro Especial Black Friday
+            {t('promo.title')}
           </h2>
         </div>
 
@@ -42,25 +44,28 @@ const PromoDialog = () => {
         <div className="p-6">
           {isMobile ? (
             // Versão Mobile
-            <p className="font-lato text-charcoal/90 leading-relaxed text-center">
-              🌿 Novembro Especial Black Friday:<br/>
-              10% de desconto na primeira massagem<br/>
-              e shower grátis para clientes durante todo o mês.
-              <br/><br/>
-              💆‍♀️ Reserve já o seu momento de relaxamento.
+            <p className="font-lato text-charcoal/90 leading-relaxed text-center whitespace-pre-line">
+              {t('promo.mobileText')}
             </p>
           ) : (
             // Versão Desktop
             <div className="space-y-4">
               <h3 className="font-cormorant text-2xl font-semibold text-center text-charcoal">
-                ✨ Novembro Especial da Black Friday no Lennure Lux Spa ✨
+                {t('promo.desktopTitle')}
               </h3>
               <p className="font-lato text-charcoal/90 leading-relaxed text-center">
-                A promoção continua!<br/>
-                Aproveite <strong className="text-gold-dark">10% de desconto</strong> na sua primeira massagem<br/>
-                e, se você já é nosso cliente, receba <strong className="text-gold-dark">shower gratuito</strong> em todas as sessões durante o mês de novembro.
-                <br/><br/>
-                🌿 Viva uma experiência completa de relaxamento e bem-estar.
+                {t('promo.desktopText').split('\n').map((line, i) => {
+                  // Destacar "10% de desconto" e "shower gratuito"
+                  if (line.includes('10%')) {
+                    const parts = line.split('10%');
+                    return <span key={i}>{parts[0]}<strong className="text-gold-dark">10%</strong>{parts[1]}<br/></span>;
+                  }
+                  if (line.includes('shower')) {
+                    const parts = line.split(/shower gratuito|free shower/);
+                    return <span key={i}>{parts[0]}<strong className="text-gold-dark">{line.includes('shower gratuito') ? 'shower gratuito' : 'free shower'}</strong>{parts[1]}<br/></span>;
+                  }
+                  return <span key={i}>{line}<br/></span>;
+                })}
               </p>
             </div>
           )}

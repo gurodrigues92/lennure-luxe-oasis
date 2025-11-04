@@ -113,5 +113,11 @@ export const en = {
   whatsapp: {
     label: "Chat on WhatsApp",
     message: "Hello! I came through the website and would like to schedule a session."
+  },
+  promo: {
+    title: "November Black Friday Special",
+    mobileText: "🌿 November Black Friday Special:\n10% discount on your first massage\nand free shower for clients throughout the month.\n\n💆‍♀️ Book your relaxation moment now.",
+    desktopTitle: "✨ November Black Friday Special at Lennure Lux Spa ✨",
+    desktopText: "The promotion continues!\nEnjoy 10% discount on your first massage\nand if you're already our client, receive free shower in all sessions during November.\n\n🌿 Live a complete relaxation and wellness experience."
   }
 };
