@@ -59,8 +59,30 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
-  }
-  return context;
+  if (context) return context;
+
+  // Fallback seguro: evita quebra caso o Provider não esteja no topo
+  console.warn('useLanguage called outside LanguageProvider. Using fallback.');
+  const fallbackLang: Language = 'pt';
+
+  const t = (key: string): string => {
+    const keys = key.split('.');
+    let value: any = translations[fallbackLang];
+
+    for (const k of keys) {
+      if (value && typeof value === 'object') {
+        value = value[k];
+      } else {
+        return key;
+      }
+    }
+
+    return typeof value === 'string' ? value : key;
+  };
+
+  return {
+    language: fallbackLang,
+    setLanguage: () => {},
+    t,
+  };
 };
