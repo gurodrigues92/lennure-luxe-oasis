@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Differentials = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const differentials = [
     {
@@ -79,7 +79,11 @@ const Differentials = () => {
             <Button 
               variant="outline"
               size="lg"
-              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-femininas", "_blank")}
+              onClick={() => {
+                const baseUrl = "https://www.lennureluxspa.com";
+                const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
+                window.open(`${baseUrl}${path}`, "_blank");
+              }}
               className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
               {t('differentials.female')}
@@ -87,7 +91,11 @@ const Differentials = () => {
             <Button 
               variant="outline"
               size="lg"
-              onClick={() => window.open("https://www.lennureluxspa.com/terapeutas-masculinos", "_blank")}
+              onClick={() => {
+                const baseUrl = "https://www.lennureluxspa.com";
+                const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
+                window.open(`${baseUrl}${path}`, "_blank");
+              }}
               className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
             >
               {t('differentials.male')}

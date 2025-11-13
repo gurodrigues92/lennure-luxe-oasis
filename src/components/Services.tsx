@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const services = [
     {
@@ -73,7 +73,11 @@ const Services = () => {
             <Button 
               variant="goldOutline"
               size="lg"
-              onClick={() => window.open("https://www.lennureluxspa.com/massagens", "_blank")}
+              onClick={() => {
+                const baseUrl = "https://www.lennureluxspa.com";
+                const path = language === 'en' ? '/en/massagens' : '/massagens';
+                window.open(`${baseUrl}${path}`, "_blank");
+              }}
               className="min-w-[250px] group"
             >
               {t('services.cta')}
