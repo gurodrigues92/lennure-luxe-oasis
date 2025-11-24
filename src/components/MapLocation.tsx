@@ -4,7 +4,7 @@ import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const MapLocation = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.preventDefault();
     
@@ -116,7 +116,7 @@ const MapLocation = () => {
 
       <div className="w-full h-[450px] md:h-[500px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.147209900698!2d-9.1476541!3d38.737384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193371fa4d3e17%3A0xef2264aed03d2fa8!2sLennure%20Lux%20Spa!5e0!3m2!1spt-BR!2sbr!4v1760033440242!5m2!1spt-BR!2sbr"
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.147209900698!2d-9.1476541!3d38.737384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193371fa4d3e17%3A0xef2264aed03d2fa8!2sLennure%20Lux%20Spa!5e0!3m2!1s${language === 'en' ? 'en' : 'pt-BR'}!2s${language === 'en' ? 'us' : 'br'}!4v1760033440242!5m2!1s${language === 'en' ? 'en' : 'pt-BR'}!2s${language === 'en' ? 'us' : 'br'}`}
           width="100%"
           height="100%"
           style={{ border: 0 }}
