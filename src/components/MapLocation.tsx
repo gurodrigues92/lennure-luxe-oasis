@@ -1,8 +1,10 @@
 import { Phone, MapPin } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const MapLocation = () => {
+  const { t } = useLanguage();
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.preventDefault();
     
@@ -11,7 +13,7 @@ const MapLocation = () => {
     
     // 300ms delay to ensure event is sent
     setTimeout(() => {
-      const whatsappMessage = "Olá! Vim através do site e gostaria de agendar uma sessão.";
+      const whatsappMessage = t('whatsapp.message');
       const whatsappUrl = `https://wa.me/351912847526?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, "_blank");
     }, 300);
@@ -23,7 +25,7 @@ const MapLocation = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-6">
-              Venha conhecer-nos
+              {t('mapLocation.title')}
             </h2>
           </div>
 
@@ -38,7 +40,7 @@ const MapLocation = () => {
               <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-medium text-grafite text-center">Localização</h3>
+              <h3 className="font-medium text-grafite text-center">{t('mapLocation.location')}</h3>
               <p className="text-grafite/70 text-center text-sm">
                 Avenida 5 de Outubro, nº 68 — Sala 5G<br />
                 Centro de Lisboa
@@ -54,7 +56,7 @@ const MapLocation = () => {
               <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-medium text-grafite text-center">Telefone</h3>
+              <h3 className="font-medium text-grafite text-center">{t('mapLocation.phone')}</h3>
               <p className="text-grafite/70 text-center text-sm group-hover:text-gold transition-colors">
                 +351 21 586 2245
               </p>
@@ -69,7 +71,7 @@ const MapLocation = () => {
               <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center mb-2 group-hover:scale-110 transition-elegant shadow-gold">
                 <WhatsAppIcon size={32} className="text-white" />
               </div>
-              <h3 className="font-medium text-grafite text-center">WhatsApp</h3>
+              <h3 className="font-medium text-grafite text-center">{t('mapLocation.whatsapp')}</h3>
               <p className="text-grafite/70 text-center text-sm group-hover:text-gold transition-colors">
                 +351 912 847 526
               </p>
@@ -81,18 +83,18 @@ const MapLocation = () => {
             <div className="bg-gradient-to-br from-gold/10 via-perola/20 to-champagne/10 rounded-2xl p-8 md:p-10 border border-gold/20 shadow-elegant">
               <div className="text-center">
                 <h3 className="text-2xl md:text-3xl font-cormorant text-grafite mb-2 font-bold">
-                  Estacionamento Próximo
+                  {t('mapLocation.parking.title')}
                 </h3>
                 <p className="text-grafite/80 leading-relaxed mb-4">
-                  Se vier de carro, temos uma excelente notícia: O Lennure Lux Spa fica a apenas <strong>5 minutos a pé</strong> do estacionamento.
+                  {t('mapLocation.parking.description')} <strong>{t('mapLocation.parking.walkTime')}</strong> {t('mapLocation.parking.fromParking')}.
                 </p>
                 
                 <div className="bg-white/60 rounded-lg p-4 mb-4 border border-gold/10 max-w-2xl mx-auto">
                   <p className="text-grafite/70 text-sm mb-3">
-                    <strong>Importante:</strong> Recomendamos usar este estacionamento para garantir tranquilidade.
+                    <strong>{t('mapLocation.parking.important')}</strong> {t('mapLocation.parking.recommendation')}
                   </p>
                   <p className="text-grafite/60 text-xs italic">
-                    Somente pagamento numerário é aceito no local.
+                    {t('mapLocation.parking.cashOnly')}
                   </p>
                 </div>
 
@@ -104,7 +106,7 @@ const MapLocation = () => {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
                 >
                   <MapPin className="w-5 h-5" />
-                  Abrir Estacionamento no Google Maps
+                  {t('mapLocation.parking.cta')}
                 </a>
               </div>
             </div>
