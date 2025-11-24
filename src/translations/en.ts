@@ -119,5 +119,20 @@ export const en = {
     mobileText: "🌿 November Black Friday Special:\n10% discount on your first massage\nand free shower for clients throughout the month.\n\n💆‍♀️ Book your relaxation moment now.",
     desktopTitle: "✨ November Black Friday Special at Lennure Lux Spa ✨",
     desktopText: "The promotion continues!\nEnjoy 10% discount on your first massage\nand if you're already our client, receive free shower in all sessions during November.\n\n🌿 Live a complete relaxation and wellness experience."
+  },
+  mapLocation: {
+    title: "Come Visit Us",
+    location: "Location",
+    phone: "Phone",
+    whatsapp: "WhatsApp",
+    parking: {
+      title: "Nearby Parking",
+      description: "If you're coming by car, we have great news: Lennure Lux Spa is only",
+      walkTime: "5 minutes walk",
+      important: "Important:",
+      recommendation: "We recommend using this parking lot to ensure peace of mind.",
+      cashOnly: "Only cash payment is accepted on site.",
+      cta: "Open Parking on Google Maps"
+    }
   }
 };
