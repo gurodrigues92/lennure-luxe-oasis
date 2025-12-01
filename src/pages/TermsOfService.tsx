@@ -118,6 +118,7 @@ const TermsOfService = () => {
                   <li>Cartão de crédito/débito (Visa, Mastercard)</li>
                   <li>Transferência bancária</li>
                   <li>MBWay</li>
+                  <li>PayPal</li>
                 </ul>
                 <p className="leading-relaxed mt-4">
                   Os preços apresentados no Site incluem IVA à taxa legal em vigor. Reservamo-nos o direito 
