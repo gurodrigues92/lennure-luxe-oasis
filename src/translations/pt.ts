@@ -115,10 +115,22 @@ export const pt = {
     message: "Olá! Vim através do site e gostaria de agendar uma sessão."
   },
   promo: {
-    title: "Novembro Especial Black Friday",
-    mobileText: "🌿 Novembro Especial Black Friday:\n10% de desconto na primeira massagem\ne shower grátis para clientes durante todo o mês.\n\n💆‍♀️ Reserve já o seu momento de relaxamento.",
-    desktopTitle: "✨ Novembro Especial da Black Friday no Lennure Lux Spa ✨",
-    desktopText: "A promoção continua!\nAproveite 10% de desconto na sua primeira massagem\ne, se você já é nosso cliente, receba shower gratuito em todas as sessões durante o mês de novembro.\n\n🌿 Viva uma experiência completa de relaxamento e bem-estar."
+    title: "Promoção de Natal Lennure Lux Spa",
+    mobileText: "🎄 Natal Lux já começou!\n\nDurante todo o mês, as massagens premium recebem presentes exclusivos.\n\n✨ Body-to-Body com pedras quentes\n✨ Sensitive com Sensory Boost\n✨ Vice-Versa com 10–15 min extras\n✨ BDSM/Fetiche/Prostática com adição sensorial\n✨ Especial com Vinho do Porto + chocolate\n✨ 4 Mãos com Shower cortesia\n✨ Casal com vinho & chocolate + toque sensitivo\n✨ Surprise – massagem totalmente surpresa\n\n🎁 Todas finalizadas com esfoliação!\n\nEscolha sua massagem e receba o presente de Natal.",
+    desktopTitle: "🎄 Natal Lux já começou",
+    desktopText: "Durante todo o mês, as massagens premium do Lennure Lux Spa recebem presentes exclusivos, sem qualquer alteração no valor do serviço.\n\nConfira alguns dos mimos deste mês:",
+    benefits: [
+      "Body-to-Body com pedras quentes",
+      "Sensitive com Sensory Boost especial",
+      "Vice-Versa com 10–15 min extras",
+      "BDSM/Fetiche/Prostática com adição sensorial exclusiva",
+      "Especial com Vinho do Porto + chocolate + pedras quentes",
+      "4 Mãos com Shower cortesia",
+      "Casal com vinho & chocolate + toque sensitivo extra",
+      "Surprise – a massagem do mês, totalmente surpresa"
+    ],
+    footer: "E todas as massagens são finalizadas com esfoliação",
+    cta: "Escolha sua massagem e receba o presente de Natal que preparamos para você."
   },
   mapLocation: {
     title: "Venha conhecer-nos",
