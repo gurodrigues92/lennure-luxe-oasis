@@ -10,9 +10,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const testimonials = [
   {
-    name: "Walmir Melo",
-    location: "James PT",
-    text: "Experiência excelente no Lennure Lux Spa. Ambiente muito bonito, limpo e acolhedor. Profissionais atenciosas e preparadas, que proporcionam um atendimento de alto nível e relaxamento verdadeiro. Um espaço ideal para quem procura bem-estar, tranquilidade e cuidado com todos os detalhes. Recomendo totalmente.",
+    name: "Gabriel Ribeiro",
+    location: "Lisboa",
+    text: "Experiência no Lennure Lux Spa, muito agradável, espaço acolhedor e lindo, atendido pela terapeuta Lavínia, excelente no seu trabalho e muito simpática, adaptativa e profissional, sem palavras para descrever a terapeuta. Voltarei por ela 100%",
+    rating: 5
+  },
+  {
+    name: "Jose N",
+    location: "Lisboa",
+    text: "Experiência no Lennure Lux Spa, muito agradável, atendido pela terapeuta Mia, excelente momento de relaxamento que me proporcionou",
     rating: 5
   },
   {
@@ -34,9 +40,33 @@ const testimonials = [
     rating: 5
   },
   {
-    name: "Anonymous Client",
-    location: "International",
-    text: "Best experience I've had in a spa. The location is perfect and the staff is amazing.. definitely gonna come back!",
+    name: "Jhonathan Barba",
+    location: "Lisboa",
+    text: "Experiência excelente no Lennure Lux Spa. Ambiente muito bonito, limpo e acolhedor. Profissionais atenciosas e preparadas, que proporcionam um atendimento de alto nível e relaxamento verdadeiro. Um espaço ideal para quem procura bem-estar, tranquilidade e cuidado com todos os detalhes. Recomendo totalmente.",
+    rating: 5
+  },
+  {
+    name: "Islene Marques dos Santos",
+    location: "Lisboa",
+    text: "Amei o spa, ótimo atendimento, desde a recepção até a finalização. Fiz um atendimento com meu marido, com os terapeutas Paul e Nina! Recomendo",
+    rating: 5
+  },
+  {
+    name: "Filipe Larsson",
+    location: "Lisboa",
+    text: "5 Estrelas. O atendimento, a massagem e o espaço.",
+    rating: 5
+  },
+  {
+    name: "Walmir Melo",
+    location: "James PT",
+    text: "A melhor experiência que já tive em um spa. A localização é perfeita e a equipe é incrível... com certeza voltarei!",
+    rating: 5
+  },
+  {
+    name: "Aleksandr de Portugal",
+    location: "Portugal",
+    text: "Tive uma sessão com a Lavinia, uma terapeuta brasileira, e foi ótima. Ela foi simpática, atenciosa e me deixou à vontade imediatamente. Toda a experiência foi pessoal e sem pressa, e ficou claro que ela sabe o que está fazendo. Saí me sentindo relaxado e muito satisfeito com a consulta.",
     rating: 5
   }
 ];
