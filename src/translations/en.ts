@@ -115,10 +115,22 @@ export const en = {
     message: "Hello! I came through the website and would like to schedule a session."
   },
   promo: {
-    title: "November Black Friday Special",
-    mobileText: "🌿 November Black Friday Special:\n10% discount on your first massage\nand free shower for clients throughout the month.\n\n💆‍♀️ Book your relaxation moment now.",
-    desktopTitle: "✨ November Black Friday Special at Lennure Lux Spa ✨",
-    desktopText: "The promotion continues!\nEnjoy 10% discount on your first massage\nand if you're already our client, receive free shower in all sessions during November.\n\n🌿 Live a complete relaxation and wellness experience."
+    title: "Lennure Lux Spa Christmas Promotion",
+    mobileText: "🎄 Lux Christmas has begun!\n\nThroughout the month, premium massages receive exclusive gifts.\n\n✨ Body-to-Body with hot stones\n✨ Sensitive with Sensory Boost\n✨ Vice-Versa with 10–15 min extra\n✨ BDSM/Fetish/Prostate with sensory addition\n✨ Special with Port Wine + chocolate\n✨ 4 Hands with complimentary Shower\n✨ Couple with wine & chocolate + extra sensitive touch\n✨ Surprise – totally surprise massage\n\n🎁 All finished with exfoliation!\n\nChoose your massage and receive your Christmas gift.",
+    desktopTitle: "🎄 Lux Christmas has begun",
+    desktopText: "Throughout the month, Lennure Lux Spa premium massages receive exclusive gifts, with no change in service price.\n\nCheck out some of this month's treats:",
+    benefits: [
+      "Body-to-Body with hot stones",
+      "Sensitive with special Sensory Boost",
+      "Vice-Versa with 10–15 min extra",
+      "BDSM/Fetish/Prostate with exclusive sensory addition",
+      "Special with Port Wine + chocolate + hot stones",
+      "4 Hands with complimentary Shower",
+      "Couple with wine & chocolate + extra sensitive touch",
+      "Surprise – the massage of the month, totally surprise"
+    ],
+    footer: "And all massages are finished with exfoliation",
+    cta: "Choose your massage and receive the Christmas gift we prepared for you."
   },
   mapLocation: {
     title: "Come Visit Us",
