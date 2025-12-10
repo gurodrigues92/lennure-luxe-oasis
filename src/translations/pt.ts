@@ -85,7 +85,7 @@ export const pt = {
     emailValue: "lennureluxspa@icloud.com",
     hours: "Horário de Funcionamento",
     payment: "Formas de Pagamento",
-    paymentValue: "Dinheiro, MBWay, Transferência Bancária, PayPal",
+    paymentValue: "Dinheiro, MBWay, Transferência Bancária, PayPal, Cartão de Crédito/Débito",
     days: {
       weekdays: "Segunda a Sexta",
       saturday: "Sábado",
@@ -107,7 +107,7 @@ export const pt = {
     terms: "Termos de Uso",
     cancellation: "Política de Cancelamento",
     institutional: "Informação Institucional",
-    institutionalText: "O acesso aos nossos serviços está condicionado ao cumprimento rigoroso dos nossos princípios de respeito, privacidade e profissionalismo. Não são toleradas condutas desrespeitosas ou inadequadas. O Lennure Lux Spa reserva-se o direito de recusar serviço a qualquer pessoa que não cumpra estes valores. Aceitamos pagamento em dinheiro, MBWay, transferência bancária e PayPal.",
+    institutionalText: "O acesso aos nossos serviços está condicionado ao cumprimento rigoroso dos nossos princípios de respeito, privacidade e profissionalismo. Não são toleradas condutas desrespeitosas ou inadequadas. O Lennure Lux Spa reserva-se o direito de recusar serviço a qualquer pessoa que não cumpra estes valores. Aceitamos pagamento em dinheiro, MBWay, transferência bancária, PayPal e cartão de crédito/débito.",
     copyright: "Todos os direitos reservados."
   },
   whatsapp: {
