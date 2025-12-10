@@ -1,4 +1,4 @@
-import { Shield, Sparkles, Users, CheckCircle, Languages, Heart } from "lucide-react";
+import { Shield, Hourglass, Users, CheckCircle, Languages, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -27,7 +27,7 @@ const Differentials = () => {
       description: t('differentials.professionalismDesc')
     },
     {
-      icon: Sparkles,
+      icon: Hourglass,
       title: t('differentials.personalization'),
       description: t('differentials.personalizationDesc')
     },
