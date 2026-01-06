@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X, Gift } from "lucide-react";
+import { X, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -58,8 +58,8 @@ const PromoDialog = () => {
         </button>
 
         {/* Header com ícone natalino */}
-        <div className="bg-gradient-to-r from-red-700 via-red-600 to-green-700 text-white p-6 text-center">
-          <Gift className="w-12 h-12 mx-auto mb-3 animate-pulse" />
+        <div className="bg-gradient-to-r from-[#C4A052] via-[#D4AF5A] to-[#9A7B4F] text-white p-6 text-center">
+          <Sparkles className="w-12 h-12 mx-auto mb-3 animate-pulse" />
           <h2 className="font-cormorant text-2xl sm:text-3xl font-bold">
             {t('promo.title')}
           </h2>
@@ -91,7 +91,7 @@ const PromoDialog = () => {
               </ul>
               
               {/* Footer destacado */}
-              <p className="text-center font-medium text-red-700">
+              <p className="text-center font-medium text-gold">
                 🎁 {t('promo.footer')}
               </p>
               
