@@ -117,7 +117,7 @@ export const en = {
   promo: {
     title: "Happy New Year ✨",
     mobileText: "✨ Happy New Year!\n\nWe enter the new year with the same commitment: caring for you, with time, presence and real experience.\n\n🎁 Active promotion: 10% discount for new clients\n\n💆 Massage of the month: Vice-Versa with +15 extra minutes\n\n📚 New: Workshop registrations are now open (limited spots)\n\nMake January the month to treat yourself better.",
-    desktopTitle: "✨ Happy New Year",
+    desktopTitle: "To start the year well:",
     desktopText: "We enter the new year with the same commitment: caring for you, with time, presence and real experience.\n\nTo start well:",
     benefits: [
       "Active promotion: 10% discount for new clients still valid",
