@@ -115,22 +115,17 @@ export const pt = {
     message: "Olá! Vim através do site e gostaria de agendar uma sessão."
   },
   promo: {
-    title: "Promoção de Natal Lennure Lux Spa",
-    mobileText: "🎄 Natal Lux já começou!\n\nDurante todo o mês, as massagens premium recebem presentes exclusivos.\n\n✨ Body-to-Body com pedras quentes\n✨ Sensitive com Sensory Boost\n✨ Vice-Versa com 10–15 min extras\n✨ BDSM/Fetiche/Prostática com adição sensorial\n✨ Especial com Vinho do Porto + chocolate\n✨ 4 Mãos com Shower cortesia\n✨ Casal com vinho & chocolate + toque sensitivo\n✨ Surprise – massagem totalmente surpresa\n\n🎁 Todas finalizadas com esfoliação!\n\nEscolha sua massagem e receba o presente de Natal.",
-    desktopTitle: "🎄 Natal Lux já começou",
-    desktopText: "Durante todo o mês, as massagens premium do Lennure Lux Spa recebem presentes exclusivos, sem qualquer alteração no valor do serviço.\n\nConfira alguns dos mimos deste mês:",
+    title: "Feliz Ano Novo ✨",
+    mobileText: "✨ Feliz Ano Novo!\n\nEntramos no novo ano com o mesmo compromisso: cuidar de si, com tempo, presença e experiência real.\n\n🎁 Promoção ativa: 10% de desconto para novos clientes\n\n💆 Massagem do mês: Vice-Versa com +15 minutos extra\n\n📚 Novidade: Inscrições abertas para o workshop (vagas limitadas)\n\nAproveite janeiro para se oferecer algo melhor.",
+    desktopTitle: "✨ Feliz Ano Novo",
+    desktopText: "Entramos no novo ano com o mesmo compromisso: cuidar de si, com tempo, presença e experiência real.\n\nPara começar bem:",
     benefits: [
-      "Body-to-Body com pedras quentes",
-      "Sensitive com Sensory Boost especial",
-      "Vice-Versa com 10–15 min extras",
-      "BDSM/Fetiche/Prostática com adição sensorial exclusiva",
-      "Especial com Vinho do Porto + chocolate + pedras quentes",
-      "4 Mãos com Shower cortesia",
-      "Casal com vinho & chocolate + toque sensitivo extra",
-      "Surprise – a massagem do mês, totalmente surpresa"
+      "Promoção ativa: 10% de desconto para novos clientes continua válida",
+      "Massagem do mês: Vice-Versa com +15 minutos extra para aproveitar sem pressa",
+      "Novidade: Inscrições para o workshop já estão abertas — vagas limitadas"
     ],
-    footer: "E todas as massagens são finalizadas com esfoliação",
-    cta: "Escolha sua massagem e receba o presente de Natal que preparamos para você."
+    footer: "Porque o relógio aqui colabora",
+    cta: "Agende, participe e comece o ano do lado certo do bem-estar."
   },
   mapLocation: {
     title: "Venha conhecer-nos",
