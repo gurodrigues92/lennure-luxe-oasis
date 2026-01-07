@@ -7,33 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const PromoDialog = () => {
   const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
-  const { t, language } = useLanguage();
-
-  // Get benefits array based on language
-  const getBenefits = (): string[] => {
-    if (language === 'pt') {
-      return [
-        "Body-to-Body com pedras quentes",
-        "Sensitive com Sensory Boost especial",
-        "Vice-Versa com 10–15 min extras",
-        "BDSM/Fetiche/Prostática com adição sensorial exclusiva",
-        "Especial com Vinho do Porto + chocolate + pedras quentes",
-        "4 Mãos com Shower cortesia",
-        "Casal com vinho & chocolate + toque sensitivo extra",
-        "Surprise – a massagem do mês, totalmente surpresa"
-      ];
-    }
-    return [
-      "Body-to-Body with hot stones",
-      "Sensitive with special Sensory Boost",
-      "Vice-Versa with 10–15 min extra",
-      "BDSM/Fetish/Prostate with exclusive sensory addition",
-      "Special with Port Wine + chocolate + hot stones",
-      "4 Hands with complimentary Shower",
-      "Couple with wine & chocolate + extra sensitive touch",
-      "Surprise – the massage of the month, totally surprise"
-    ];
-  };
+  const { t } = useLanguage();
 
   useEffect(() => {
     setTimeout(() => {
@@ -57,7 +31,7 @@ const PromoDialog = () => {
           <X className="h-5 w-5 text-charcoal/70" />
         </button>
 
-        {/* Header com ícone natalino */}
+        {/* Header com ícone de Ano Novo */}
         <div className="bg-gradient-to-r from-[#C4A052] via-[#D4AF5A] to-[#9A7B4F] text-white p-6 text-center">
           <Sparkles className="w-12 h-12 mx-auto mb-3 animate-pulse" />
           <h2 className="font-cormorant text-2xl sm:text-3xl font-bold">
@@ -82,7 +56,7 @@ const PromoDialog = () => {
               
               {/* Lista de benefícios */}
               <ul className="text-left space-y-2 bg-white/50 rounded-lg p-4">
-                {getBenefits().map((benefit, i) => (
+                {(t('promo.benefits') as unknown as string[]).map((benefit, i) => (
                   <li key={i} className="flex items-start gap-2 text-charcoal/85">
                     <span className="text-gold flex-shrink-0">✨</span>
                     <span className="text-sm">{benefit}</span>
