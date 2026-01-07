@@ -3,11 +3,14 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, Sparkles } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const PromoDialog = () => {
   const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const benefits = translations[language].promo.benefits;
 
   useEffect(() => {
     setTimeout(() => {
@@ -56,7 +59,7 @@ const PromoDialog = () => {
               
               {/* Lista de benefícios */}
               <ul className="text-left space-y-2 bg-white/50 rounded-lg p-4">
-                {(t('promo.benefits') as unknown as string[]).map((benefit, i) => (
+                {benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start gap-2 text-charcoal/85">
                     <span className="text-gold flex-shrink-0">✨</span>
                     <span className="text-sm">{benefit}</span>
