@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Clock, CreditCard } from "lucide-react";
 import { GradientButton } from "@/components/ui/gradient-button";
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
+import TelegramIcon from "@/components/icons/TelegramIcon";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -79,6 +80,25 @@ const Contact = () => {
                   <h3 className="font-medium text-grafite mb-1">{t('contact.email')}</h3>
                   <p className="text-grafite/70">
                     {t('contact.emailValue')}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <TelegramIcon className="w-6 h-6 text-gold-dark" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-grafite mb-1">{t('contact.telegram')}</h3>
+                  <p className="text-grafite/70">
+                    <a 
+                      href="https://t.me/lennureluxspa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gold transition-colors"
+                    >
+                      {t('contact.telegramValue')}
+                    </a>
                   </p>
                 </div>
               </div>
