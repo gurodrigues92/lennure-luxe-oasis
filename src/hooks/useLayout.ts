@@ -5,6 +5,7 @@ import { toast } from 'sonner';
 const DEFAULT_SECTIONS = [
   'hero',
   'about',
+  'video',
   'services',
   'differentials',
   'space',

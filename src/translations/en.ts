@@ -141,5 +141,9 @@ export const en = {
       cashOnly: "Only cash payment is accepted on site.",
       cta: "Open Parking on Google Maps"
     }
+  },
+  videoTour: {
+    title: "Discover Our Sanctuary",
+    subtitle: "A sensory experience where every detail was designed for your well-being"
   }
 };
