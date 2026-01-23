@@ -6,12 +6,6 @@ const VideoTour = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-bronze via-gold-dark to-gold">
       <div className="container max-w-5xl mx-auto px-4">
-        {/* Title */}
-        <div className="text-center mb-10">
-          <h2 className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light text-cream mb-4">
-            <span className="text-gradient-gold">{t('videoTour.title')}</span>
-          </h2>
-        </div>
 
         {/* Video Container */}
         <div className="relative rounded-2xl overflow-hidden shadow-elegant">
