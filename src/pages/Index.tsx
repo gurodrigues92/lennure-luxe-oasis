@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import VideoTour from "@/components/VideoTour";
 import Services from "@/components/Services";
 import Space from "@/components/Space";
 import Differentials from "@/components/Differentials";
@@ -21,6 +22,7 @@ const Index = () => {
   
   // Create refs for section tracking
   const aboutRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const spaceRef = useRef<HTMLDivElement>(null);
   const differentialsRef = useRef<HTMLDivElement>(null);
@@ -41,6 +43,7 @@ const Index = () => {
     enableSectionTracking: true,
     sectionRefs: {
       about: aboutRef,
+      video: videoRef,
       services: servicesRef,
       space: spaceRef,
       differentials: differentialsRef,
@@ -55,6 +58,7 @@ const Index = () => {
   const sectionComponents: Record<string, { component: JSX.Element; ref: React.RefObject<HTMLDivElement> }> = {
     hero: { component: <Hero />, ref: { current: null } },
     about: { component: <About />, ref: aboutRef },
+    video: { component: <VideoTour />, ref: videoRef },
     services: { component: <Services />, ref: servicesRef },
     differentials: { component: <Differentials />, ref: differentialsRef },
     space: { component: <Space />, ref: spaceRef },

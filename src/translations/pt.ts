@@ -142,5 +142,9 @@ export const pt = {
       cashOnly: "Somente pagamento numerário é aceito no local.",
       cta: "Abrir Estacionamento no Google Maps"
     }
+  },
+  videoTour: {
+    title: "Conheça o Nosso Refúgio",
+    subtitle: "Uma experiência sensorial onde cada detalhe foi pensado para o seu bem-estar"
   }
 };
