@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FloatingTelegram from "@/components/FloatingTelegram";
 import PromoDialog from "@/components/PromoDialog";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -98,6 +99,7 @@ const Index = () => {
       <Footer />
       <PromoDialog />
       <FloatingWhatsApp />
+      <FloatingTelegram />
     </div>
   );
 };
