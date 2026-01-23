@@ -1,4 +1,10 @@
 export const pt = {
+  floatingContact: {
+    title: "Fale Connosco",
+    whatsapp: "WhatsApp",
+    telegram: "Telegram",
+    call: "Ligar Agora"
+  },
   hero: {
     title: "Bem-estar e experiência sensorial",
     subtitle: "no coração de Lisboa",
@@ -83,6 +89,8 @@ export const pt = {
     phoneValue: "+351 912 847 526",
     email: "E-mail",
     emailValue: "lennureluxspa@icloud.com",
+    telegram: "Telegram",
+    telegramValue: "@lennureluxspa",
     hours: "Horário de Funcionamento",
     payment: "Formas de Pagamento",
     paymentValue: "Dinheiro, MBWay, Transferência Bancária, PayPal, Cartão de Crédito/Débito",

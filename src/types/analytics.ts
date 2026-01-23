@@ -1,12 +1,14 @@
 export type WhatsAppLocation = 
   | 'hero_cta' 
   | 'floating_button' 
+  | 'floating_contact'
   | 'contact_section' 
   | 'map_section'
   | 'space_section';
 
 export type PhoneLocation = 
   | 'contact_section' 
+  | 'floating_contact'
   | 'map_section';
 
 export type SectionName =

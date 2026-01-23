@@ -10,8 +10,7 @@ import Philosophy from "@/components/Philosophy";
 import Contact from "@/components/Contact";
 import MapLocation from "@/components/MapLocation";
 import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import FloatingTelegram from "@/components/FloatingTelegram";
+import FloatingContact from "@/components/FloatingContact";
 import PromoDialog from "@/components/PromoDialog";
 import LanguageSelector from "@/components/LanguageSelector";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -98,8 +97,7 @@ const Index = () => {
       
       <Footer />
       <PromoDialog />
-      <FloatingWhatsApp />
-      <FloatingTelegram />
+      <FloatingContact />
     </div>
   );
 };
