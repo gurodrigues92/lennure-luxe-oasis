@@ -4,7 +4,7 @@ const VideoTour = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 bg-grafite">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-bronze via-gold-dark to-gold">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-10">
