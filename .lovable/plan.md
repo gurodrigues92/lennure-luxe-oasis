@@ -1,177 +1,324 @@
 
 
-## Plano: Adicionar Botões de Terapeutas no Hero e Após o Vídeo
+## Plano: Otimização da Landing Page Lennure Lux Spa
 
 ### Objetivo
-Adicionar botões secundários "Terapeutas Femininas" e "Terapeutas Masculinos" em duas localizações:
-1. Na primeira dobra (Hero), abaixo do botão "Marcar Sessão Agora"
-2. Logo após a seção de vídeo, com título "Conheça nossos terapeutas"
+Refatorar a landing page para melhorar a experiência do usuário e conversão, reorganizando seções, eliminando redundâncias e melhorando a visibilidade dos botões de terapeutas.
 
 ---
 
-### Mudanças a Implementar
+## Resumo das Mudanças
 
-#### 1. Atualizar Hero.tsx
+| Mudança | Arquivo | Ação |
+|---------|---------|------|
+| Reordenar seções | `useLayout.ts` | Mover "services" logo após "hero" |
+| Reestruturar Hero | `Hero.tsx` | Adicionar título de terapeutas + mover CTA |
+| Melhorar botões | `Hero.tsx` | Aumentar visibilidade com fundo sólido |
+| Remover redundância | `VideoTour.tsx` | Remover seção de terapeutas |
+| Remover redundância | `Differentials.tsx` | Remover botões de terapeutas |
+| Remover CTA redundante | `Space.tsx` | Remover botão "Agendar Visita" |
+| Atualizar traduções | `pt.ts`, `en.ts` | Adicionar novo título para terapeutas no Hero |
 
-Adicionar dois botões secundários abaixo do CTA principal, usando a variante `goldOutline` para manter hierarquia visual:
+---
 
+## 1. Reordenar Seções (Prioridade #1)
+
+**Arquivo:** `src/hooks/useLayout.ts`
+
+Alterar a ordem padrão das seções para que "Services" apareça logo após o Hero:
+
+```typescript
+// Antes:
+const DEFAULT_SECTIONS = [
+  'hero',
+  'about',
+  'video',
+  'services',
+  'differentials',
+  'space',
+  'testimonials',
+  'philosophy',
+  'contact',
+];
+
+// Depois:
+const DEFAULT_SECTIONS = [
+  'hero',
+  'services',    // ← Movido para o topo
+  'about',
+  'video',
+  'differentials',
+  'space',
+  'testimonials',
+  'philosophy',
+  'contact',
+];
 ```
-┌─────────────────────────────────────────┐
-│              [Logo]                      │
-│                                          │
-│     Bem-estar e experiência sensorial   │
-│        no coração de Lisboa             │
-│                                          │
-│  [====== Marcar Sessão Agora ======]    │  ← Botão principal (GradientButton)
-│                                          │
-│  [Terapeutas Femininas] [Terapeutas Masculinos]  │  ← Novos botões secundários
-│                                          │
-└─────────────────────────────────────────┘
+
+**Nova ordem visual da página:**
+```
+1. Hero (com botões de terapeutas)
+2. Serviços Oferecidos (3 cards + botão)
+3. Sobre Nós
+4. Vídeo Tour
+5. Diferenciais do Spa (sem botões de terapeutas)
+6. Espaços (sem botão "Agendar Visita")
+7. Testemunhos
+8. Filosofia
+9. Contato
+10. Mapa
 ```
 
-**Código a adicionar (após o GradientButton):**
+---
+
+## 2. Reestruturar Hero Section
+
+**Arquivo:** `src/components/Hero.tsx`
+
+### Mudanças:
+1. Adicionar título "Conheça nossos terapeutas" acima dos botões
+2. Mover o CTA "Marcar Sessão Agora" para baixo dos botões de terapeutas
+3. Melhorar visibilidade dos botões com fundo sólido dourado semi-transparente
+
+### Nova estrutura do Hero:
+```
+┌─────────────────────────────────────────────────┐
+│                    [Logo]                        │
+│                                                  │
+│      Bem-estar e experiência sensorial          │
+│           no coração de Lisboa                  │
+│                                                  │
+│   (descrição do spa)                            │
+│                                                  │
+│       Conheça nossos terapeutas                 │  ← Novo título
+│                                                  │
+│ [Terapeutas Femininas] [Terapeutas Masculinos] │  ← Botões melhorados
+│                                                  │
+│       [====== Marcar Sessão Agora ======]       │  ← CTA movido para baixo
+│                                                  │
+└─────────────────────────────────────────────────┘
+```
+
+### Código das alterações:
 
 ```tsx
-{/* Secondary Therapist Buttons */}
-<div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-  <Button 
-    variant="goldOutline"
-    size="lg"
-    onClick={() => {
-      const baseUrl = "https://www.lennureluxspa.com";
-      const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
-      window.open(`${baseUrl}${path}`, "_blank");
-    }}
-    className="min-w-[180px]"
+{/* Therapists Section */}
+<div className="pt-6">
+  <h3 className="font-cormorant text-xl md:text-2xl font-light text-gold mb-4">
+    {t('hero.therapistsTitle')}
+  </h3>
+  
+  {/* Secondary Therapist Buttons - IMPROVED VISIBILITY */}
+  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+    <Button 
+      variant="goldOutline"
+      size="lg"
+      onClick={() => {...}}
+      className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-gold"
+    >
+      {t('differentials.female')}
+    </Button>
+    <Button 
+      variant="goldOutline"
+      size="lg"
+      onClick={() => {...}}
+      className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-gold"
+    >
+      {t('differentials.male')}
+    </Button>
+  </div>
+</div>
+
+{/* Main CTA - NOW BELOW THERAPIST BUTTONS */}
+<div className="pt-8">
+  <GradientButton 
+    variant="gold"
+    onClick={handleWhatsAppClick}
+    className="text-lg px-12 py-6 animate-glow-pulse"
   >
-    {t('differentials.female')}
-  </Button>
-  <Button 
-    variant="goldOutline"
-    size="lg"
-    onClick={() => {
-      const baseUrl = "https://www.lennureluxspa.com";
-      const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
-      window.open(`${baseUrl}${path}`, "_blank");
-    }}
-    className="min-w-[180px]"
-  >
-    {t('differentials.male')}
-  </Button>
+    {t('hero.cta')}
+  </GradientButton>
 </div>
 ```
 
-**Imports a adicionar:**
-- `Button` de `@/components/ui/button`
-- Usar `language` do hook `useLanguage()`
-
 ---
 
-#### 2. Atualizar VideoTour.tsx
+## 3. Eliminar Redundâncias
 
-Adicionar nova seção após o subtítulo do vídeo com título e botões:
+### 3.1 Remover Seção de Terapeutas do VideoTour
 
-```
-┌─────────────────────────────────────────┐
-│         Conheça o Nosso Refúgio         │
-│                                          │
-│          [===============]               │  ← Vídeo
-│          [     VIDEO     ]               │
-│          [===============]               │
-│                                          │
-│     Uma experiência sensorial...         │
-│                                          │
-│      Conheça nossos terapeutas          │  ← Novo título
-│                                          │
-│  [Terapeutas Femininas] [Terapeutas Masculinos]  │  ← Novos botões
-│                                          │
-└─────────────────────────────────────────┘
-```
+**Arquivo:** `src/components/VideoTour.tsx`
 
-**Código a adicionar (após o subtítulo):**
+Remover completamente a seção "Therapists Section" (linhas 42-73):
 
 ```tsx
+// REMOVER ESTE BLOCO:
 {/* Therapists Section */}
 <div className="mt-12 text-center">
   <h3 className="font-cormorant text-2xl md:text-3xl font-light text-white mb-6">
     {t('videoTour.therapistsTitle')}
   </h3>
   <div className="flex flex-col sm:flex-row gap-3 justify-center">
-    <Button 
-      variant="outline"
-      size="lg"
-      onClick={() => {
-        const baseUrl = "https://www.lennureluxspa.com";
-        const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
-        window.open(`${baseUrl}${path}`, "_blank");
-      }}
-      className="min-w-[180px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-    >
-      {t('differentials.female')}
-    </Button>
-    <Button 
-      variant="outline"
-      size="lg"
-      onClick={() => {
-        const baseUrl = "https://www.lennureluxspa.com";
-        const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
-        window.open(`${baseUrl}${path}`, "_blank");
-      }}
-      className="min-w-[180px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-    >
-      {t('differentials.male')}
-    </Button>
+    ...
   </div>
 </div>
 ```
 
-**Imports a adicionar:**
-- `Button` de `@/components/ui/button`
-- Usar `language` do hook `useLanguage()`
+### 3.2 Remover Botões de Terapeutas dos Differentials
+
+**Arquivo:** `src/components/Differentials.tsx`
+
+Remover completamente a seção "Therapist Buttons" (linhas 77-103):
+
+```tsx
+// REMOVER ESTE BLOCO:
+{/* Therapist Buttons */}
+<div className="flex flex-row gap-3 justify-center mt-16 max-w-2xl mx-auto">
+  <Button ...>
+    {t('differentials.female')}
+  </Button>
+  <Button ...>
+    {t('differentials.male')}
+  </Button>
+</div>
+```
+
+### 3.3 Remover CTA "Agendar Visita" do Space
+
+**Arquivo:** `src/components/Space.tsx`
+
+Remover a seção "Visit CTA" (linhas 110-121):
+
+```tsx
+// REMOVER ESTE BLOCO:
+{/* Visit CTA */}
+<div className="flex flex-col items-center mt-16">
+  <div className="text-center space-y-4 max-w-md">
+    <GradientButton 
+      variant="gold"
+      className="min-w-[250px] text-lg px-10 py-4"
+      onClick={handleWhatsAppClick}
+    >
+      {t('space.cta')}
+    </GradientButton>
+  </div>
+</div>
+```
+
+Também remover imports e funções não utilizadas após esta remoção.
 
 ---
 
-#### 3. Atualizar Traduções
+## 4. Melhorar Visibilidade dos Botões de Terapeutas
 
-**src/translations/pt.ts - Adicionar:**
+**Arquivo:** `src/components/Hero.tsx`
+
+Os botões atuais são muito transparentes contra o fundo. Nova estilização:
+
+```tsx
+// Antes (pouco visível):
+className="min-w-[180px]"
+
+// Depois (mais visível):
+className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+```
+
+**Características do novo estilo:**
+- Fundo semi-transparente dourado (`bg-gold/20`)
+- Borda dourada visível (`border-2 border-gold`)
+- Hover transforma em botão sólido dourado
+- Mantém elegância e consistência com a identidade visual
+
+---
+
+## 5. Atualizar Traduções
+
+**Arquivo:** `src/translations/pt.ts`
+
+Adicionar nova key para o título de terapeutas no Hero:
+
 ```typescript
-videoTour: {
-  title: "Conheça o Nosso Refúgio",
-  subtitle: "Uma experiência sensorial...",
+hero: {
+  title: "Bem-estar e experiência sensorial",
+  subtitle: "no coração de Lisboa",
+  description: "...",
+  cta: "Marcar Sessão Agora",
   therapistsTitle: "Conheça nossos terapeutas"  // NOVO
 }
 ```
 
-**src/translations/en.ts - Adicionar:**
+**Arquivo:** `src/translations/en.ts`
+
 ```typescript
-videoTour: {
-  title: "Discover Our Sanctuary",
-  subtitle: "A sensory experience...",
+hero: {
+  title: "Wellness and sensory experience",
+  subtitle: "in the heart of Lisbon",
+  description: "...",
+  cta: "Book Session Now",
   therapistsTitle: "Meet our therapists"  // NOVO
 }
 ```
 
 ---
 
-### Detalhes Técnicos
+## Resultado Final
 
-| Componente | Estilo dos Botões | Responsividade |
-|------------|-------------------|----------------|
-| Hero | `goldOutline` - borda dourada, fundo transparente | `flex-col sm:flex-row` - empilhados em mobile |
-| VideoTour | `outline` com classes customizadas brancas | `flex-col sm:flex-row` - empilhados em mobile |
+### Antes (Problemas):
+- Botões de terapeutas aparecem 3x na página
+- "Agendar Visita" e "Falar no WhatsApp" aparecem múltiplas vezes
+- Serviços estão muito abaixo na página
+- Botões de terapeutas pouco visíveis
+- Página muito longa com conteúdo repetitivo
 
-**Comportamento dos botões:**
-- Ambos os botões abrem links externos para o site principal
-- PT: `/terapeutas-femininas` e `/terapeutas-masculinos`
-- EN: `/en/terapeutas-femininas` e `/en/terapeutas-masculinos`
-- Reutilizam as traduções já existentes em `differentials.female` e `differentials.male`
+### Depois (Otimizado):
+- Botões de terapeutas aparecem apenas 1x (no Hero)
+- CTAs simplificados + FloatingContact suficiente
+- Serviços logo após o Hero (alta visibilidade)
+- Botões de terapeutas com fundo dourado visível
+- Página mais curta e objetiva
+
+### Estrutura Visual Final:
+```
+┌─────────────────────────────────────────┐
+│            HERO                          │
+│   (Logo + Título + Terapeutas + CTA)    │
+├─────────────────────────────────────────┤
+│        SERVIÇOS OFERECIDOS              │
+│       (3 cards + Ver Mais)              │
+├─────────────────────────────────────────┤
+│            SOBRE NÓS                     │
+├─────────────────────────────────────────┤
+│          VÍDEO TOUR                      │
+│      (apenas vídeo, sem botões)         │
+├─────────────────────────────────────────┤
+│      DIFERENCIAIS DO SPA                │
+│      (apenas grid de diferenciais)      │
+├─────────────────────────────────────────┤
+│          ESPAÇOS                         │
+│      (apenas galeria, sem CTA)          │
+├─────────────────────────────────────────┤
+│         TESTEMUNHOS                      │
+├─────────────────────────────────────────┤
+│          FILOSOFIA                       │
+├─────────────────────────────────────────┤
+│          CONTATO                         │
+├─────────────────────────────────────────┤
+│           MAPA                           │
+├─────────────────────────────────────────┤
+│          FOOTER                          │
+└─────────────────────────────────────────┘
+       [Botão Flutuante de Contato]
+```
 
 ---
 
-### Arquivos a Modificar
+## Arquivos a Modificar
 
-1. `src/components/Hero.tsx` - Adicionar botões secundários
-2. `src/components/VideoTour.tsx` - Adicionar seção de terapeutas
-3. `src/translations/pt.ts` - Adicionar `therapistsTitle`
-4. `src/translations/en.ts` - Adicionar `therapistsTitle`
+1. `src/hooks/useLayout.ts` - Reordenar seções
+2. `src/components/Hero.tsx` - Reestruturar layout + melhorar botões
+3. `src/components/VideoTour.tsx` - Remover seção de terapeutas
+4. `src/components/Differentials.tsx` - Remover botões de terapeutas
+5. `src/components/Space.tsx` - Remover CTA "Agendar Visita"
+6. `src/translations/pt.ts` - Adicionar `hero.therapistsTitle`
+7. `src/translations/en.ts` - Adicionar `hero.therapistsTitle`
 
