@@ -1,94 +1,195 @@
 
 
-## Plano: Corrigir Centralização do Botão CTA e Ícone do Mouse no Hero
+## Plano: Padronizar Estilos de Botões + Remover Seção "Venha conhecer-nos"
 
-### Problema Identificado
+### Resumo do Problema
 
-O botão "Marcar Sessão" e o ícone do mouse (scroll indicator) não parecem estar 100% alinhados. Após análise do código:
+Atualmente, a página tem vários estilos diferentes de botões:
 
-1. **O botão CTA** está dentro de um `<div className="pt-8">` que não tem `flex justify-center` explícito
-2. **O ícone do mouse** está com `bottom-4` (apenas 16px da borda inferior), o que pode parecer desproporcionado
+| Componente | Botão | Estilo Atual |
+|------------|-------|--------------|
+| **Hero** | Terapeutas Femininas/Masculinos | `goldOutline` + `bg-gold/20 border-2 border-gold` ✓ (padrão desejado) |
+| **Hero** | Marcar Sessão Agora | `GradientButton` (mantém - é o CTA principal) |
+| **Services** | Ver Mais Serviços | `goldOutline` simples (sem bg-gold/20) |
+| **MapLocation** | Ver Localização do Estacionamento | `bg-gold text-white rounded-xl` (estilo custom inline) |
+| **Testimonials** | Ver Mais Avaliações | `bg-gradient-to-r from-dourado via-dourado` (gradiente inline) |
+| **Contact** | Falar no WhatsApp | `GradientButton` (mantém - é CTA de conversão) |
 
 ---
 
-### Mudanças a Implementar
+## Mudanças a Implementar
 
-**Arquivo:** `src/components/Hero.tsx`
+### 1. Padronizar Botões Secundários
 
-#### 1. Adicionar Centralização Explícita ao Wrapper do Botão CTA
+Todos os botões que **NÃO** são de "Marcar Sessão" ou "Falar no WhatsApp" devem usar o mesmo estilo dos botões de Terapeutas:
 
-**Antes (linha 89):**
 ```tsx
-<div className="pt-8">
+<Button 
+  variant="goldOutline"
+  size="lg"
+  className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+>
+```
+
+**Características do estilo padrão:**
+- Variante: `goldOutline`
+- Fundo: `bg-gold/20` (dourado semitransparente)
+- Hover: `hover:bg-gold hover:text-white`
+- Borda: `border-2 border-gold`
+- Sombra: `shadow-sm`
+
+---
+
+### 2. Arquivos a Modificar
+
+#### A. `src/components/Services.tsx` (linha 73-92)
+
+**Antes:**
+```tsx
+<Button 
+  variant="goldOutline"
+  size="lg"
+  onClick={...}
+  className="min-w-[250px] group"
+>
+  {t('services.cta')}
+  <svg>...</svg>
+</Button>
 ```
 
 **Depois:**
 ```tsx
-<div className="pt-8 flex justify-center">
+<Button 
+  variant="goldOutline"
+  size="lg"
+  onClick={...}
+  className="min-w-[250px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm group"
+>
+  {t('services.cta')}
+  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform">...</svg>
+</Button>
 ```
 
-#### 2. Ajustar Posição do Scroll Indicator
+---
 
-**Antes (linha 102):**
+#### B. `src/components/MapLocation.tsx` (linha 102-110)
+
+**Antes:**
 ```tsx
-<div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
+<a
+  href="..."
+  className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
+>
+  <MapPin className="w-5 h-5" />
+  {t('mapLocation.parking.cta')}
+</a>
 ```
 
 **Depois:**
 ```tsx
-<div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+<Button 
+  variant="goldOutline"
+  size="lg"
+  onClick={() => window.open("...", "_blank")}
+  className="bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+>
+  <MapPin className="w-5 h-5" />
+  {t('mapLocation.parking.cta')}
+</Button>
 ```
 
 ---
 
-### Comparação Visual
+#### C. `src/components/Testimonials.tsx` (linha 141-149)
 
-| Elemento | Antes | Depois |
-|----------|-------|--------|
-| Botão CTA | `text-center` implícito | `flex justify-center` explícito |
-| Scroll Indicator | `bottom-4` (16px) | `bottom-8` (32px) |
-
----
-
-### Resultado Esperado
-
+**Antes:**
+```tsx
+<a
+  href="..."
+  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dourado via-dourado to-dourado/90 hover:from-dourado/90 hover:to-dourado text-white rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
+>
+  <Star className="w-5 h-5 fill-white" />
+  <span>{t('testimonials.cta')}</span>
+</a>
 ```
-┌────────────────────────────────────────┐
-│                                        │
-│            [Logo Lennure]              │
-│                                        │
-│     A Arte do Bem-Estar de Luxo        │
-│      Bem-Estar Personalizado           │
-│                                        │
-│    Conheça os Nossos Terapeutas        │
-│  [Femininas]        [Masculinos]       │
-│                                        │
-│         [ Marcar Sessão ]              │  ← Centralizado com flex
-│                                        │
-│                                        │
-│               ⬇ mouse                  │  ← Mais espaço (32px)
-└────────────────────────────────────────┘
+
+**Depois:**
+```tsx
+<Button 
+  variant="goldOutline"
+  size="lg"
+  onClick={() => window.open("...", "_blank")}
+  className="bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+>
+  <Star className="w-5 h-5" />
+  {t('testimonials.cta')}
+</Button>
 ```
 
 ---
 
-### Detalhes Técnicos
+### 3. Remover Seção "Venha conhecer-nos"
 
-#### Por que `flex justify-center` é melhor que `text-center`:
+**Arquivo:** `src/components/MapLocation.tsx` (linhas 26-30)
 
-- `text-center` funciona bem para elementos inline, mas pode ter comportamento inconsistente com elementos block
-- `flex justify-center` garante centralização perfeita para qualquer tipo de elemento filho
-- Combinado com `inline-flex` do botão, cria um alinhamento preciso
+Remover o bloco do título:
+```tsx
+<div className="text-center mb-8 animate-fade-in">
+  <h2 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-6">
+    {t('mapLocation.title')}
+  </h2>
+</div>
+```
 
-#### Por que `bottom-8` em vez de `bottom-4`:
+**Resultado:** A seção MapLocation continuará a mostrar:
+- Cards de Localização, Telefone e WhatsApp
+- Informações de Estacionamento
+- Mapa do Google
 
-- `bottom-4` (16px) é muito próximo da borda em telas grandes
-- `bottom-8` (32px) cria uma proporção mais equilibrada
-- Mantém o ícone visível e com espaço respirável
+Apenas o título "Venha conhecer-nos" será removido.
 
 ---
 
-### Arquivo a Modificar
+## Resumo das Mudanças
 
-- `src/components/Hero.tsx` - Linhas 89 e 102
+| Arquivo | Mudança |
+|---------|---------|
+| `src/components/Services.tsx` | Adicionar classes de estilo padrão ao botão |
+| `src/components/MapLocation.tsx` | Converter `<a>` para `<Button>` + remover título |
+| `src/components/Testimonials.tsx` | Converter `<a>` para `<Button>` com estilo padrão |
+
+---
+
+## Comparação Visual
+
+**Antes:**
+```
+┌─────────────────────────────────────────┐
+│  [Ver Mais Serviços] ← borda simples    │
+│  [Ver Estacionamento] ← bg-gold sólido  │
+│  [Ver Avaliações] ← gradiente dourado   │
+└─────────────────────────────────────────┘
+```
+
+**Depois:**
+```
+┌─────────────────────────────────────────┐
+│  [Ver Mais Serviços]  ← bg-gold/20 + border-2 │
+│  [Ver Estacionamento] ← bg-gold/20 + border-2 │
+│  [Ver Avaliações]     ← bg-gold/20 + border-2 │
+└─────────────────────────────────────────┘
+```
+
+Todos com o mesmo visual: fundo dourado semitransparente, borda dourada, e hover que preenche com dourado sólido.
+
+---
+
+## Botões que NÃO serão alterados
+
+| Botão | Motivo |
+|-------|--------|
+| "Marcar Sessão Agora" (Hero) | É o CTA principal - usa GradientButton |
+| "Falar no WhatsApp" (Contact) | É o CTA de conversão - usa GradientButton |
+
+Estes botões mantêm o estilo especial porque são as ações principais de conversão do site.
 
