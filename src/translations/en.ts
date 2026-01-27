@@ -152,6 +152,7 @@ export const en = {
   },
   videoTour: {
     title: "Discover Our Sanctuary",
-    subtitle: "A sensory experience where every detail was designed for your well-being"
+    subtitle: "A sensory experience where every detail was designed for your well-being",
+    therapistsTitle: "Meet our therapists"
   }
 };

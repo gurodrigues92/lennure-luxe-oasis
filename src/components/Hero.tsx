@@ -1,9 +1,10 @@
 import { GradientButton } from "@/components/ui/gradient-button";
+import { Button } from "@/components/ui/button";
 import { trackWhatsAppClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   const handleWhatsAppClick = () => {
     // Track conversion event
@@ -57,6 +58,34 @@ const Hero = () => {
             >
               {t('hero.cta')}
             </GradientButton>
+          </div>
+
+          {/* Secondary Therapist Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+            <Button 
+              variant="goldOutline"
+              size="lg"
+              onClick={() => {
+                const baseUrl = "https://www.lennureluxspa.com";
+                const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
+                window.open(`${baseUrl}${path}`, "_blank");
+              }}
+              className="min-w-[180px]"
+            >
+              {t('differentials.female')}
+            </Button>
+            <Button 
+              variant="goldOutline"
+              size="lg"
+              onClick={() => {
+                const baseUrl = "https://www.lennureluxspa.com";
+                const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
+                window.open(`${baseUrl}${path}`, "_blank");
+              }}
+              className="min-w-[180px]"
+            >
+              {t('differentials.male')}
+            </Button>
           </div>
         </div>
       </div>

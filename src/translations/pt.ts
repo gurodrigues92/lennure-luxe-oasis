@@ -153,6 +153,7 @@ export const pt = {
   },
   videoTour: {
     title: "Conheça o Nosso Refúgio",
-    subtitle: "Uma experiência sensorial onde cada detalhe foi pensado para o seu bem-estar"
+    subtitle: "Uma experiência sensorial onde cada detalhe foi pensado para o seu bem-estar",
+    therapistsTitle: "Conheça nossos terapeutas"
   }
 };
