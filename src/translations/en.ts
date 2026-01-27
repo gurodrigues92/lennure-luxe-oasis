@@ -9,7 +9,8 @@ export const en = {
     title: "Wellness and sensory experience",
     subtitle: "in the heart of Lisbon",
     description: "Private rooms, personalized service and silent environment — a refuge of balance and comfort where every detail is designed for you.",
-    cta: "Book Session Now"
+    cta: "Book Session Now",
+    therapistsTitle: "Meet our therapists"
   },
   about: {
     title: "A wellness refuge in the center of Lisbon",

@@ -1,9 +1,8 @@
 import { Shield, Hourglass, Users, CheckCircle, Languages, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Differentials = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   
   const differentials = [
     {
@@ -74,33 +73,6 @@ const Differentials = () => {
             ))}
           </div>
 
-          {/* Therapist Buttons */}
-          <div className="flex flex-row gap-3 justify-center mt-16 max-w-2xl mx-auto">
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-            >
-              {t('differentials.female')}
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="flex-1 min-w-[140px] h-auto py-4 bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-            >
-              {t('differentials.male')}
-            </Button>
-          </div>
         </div>
       </div>
     </section>

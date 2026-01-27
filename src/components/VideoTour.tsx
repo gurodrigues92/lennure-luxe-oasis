@@ -1,8 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Button } from "@/components/ui/button";
 
 const VideoTour = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-bronze via-gold-dark to-gold">
@@ -38,39 +37,6 @@ const VideoTour = () => {
         <p className="text-center mt-8 text-cream/70 font-lato text-sm md:text-base max-w-2xl mx-auto">
           {t('videoTour.subtitle')}
         </p>
-
-        {/* Therapists Section */}
-        <div className="mt-12 text-center">
-          <h3 className="font-cormorant text-2xl md:text-3xl font-light text-white mb-6">
-            {t('videoTour.therapistsTitle')}
-          </h3>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="min-w-[180px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-            >
-              {t('differentials.female')}
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="min-w-[180px] bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white"
-            >
-              {t('differentials.male')}
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
