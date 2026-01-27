@@ -1,4 +1,5 @@
 import { Phone, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -23,12 +24,6 @@ const MapLocation = () => {
     <section className="bg-perola/30 pt-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-6">
-              {t('mapLocation.title')}
-            </h2>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up">
             <a
               href="https://www.google.com/maps/place/Lennure+Lux+Spa/@38.737384,-9.1476541,17z"
@@ -99,15 +94,15 @@ const MapLocation = () => {
                 </div>
 
                 {/* TODO: Substituir pelo link correto do Google Maps */}
-                <a
-                  href="https://www.google.com/maps/place/Estacionamento+Jardim+do+Carregal/@38.7375167,-9.148795,17z/data=!3m1!4b1!4m6!3m5!1s0xd19330bcc2d1f47:0x19cc00a260e6e661!8m2!3d38.7375167!4d-9.148795!16s%2Fg%2F11cmytc398?entry=tts&g_ep=EgoyMDI1MDkxNy4wIPu8ASoASAFQAw%3D%3D&skid=0ea874e6-617a-4e43-925b-180b984aee1e"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl transition-colors font-medium shadow-md hover:shadow-lg"
+                <Button 
+                  variant="goldOutline"
+                  size="lg"
+                  onClick={() => window.open("https://www.google.com/maps/place/Estacionamento+Jardim+do+Carregal/@38.7375167,-9.148795,17z/data=!3m1!4b1!4m6!3m5!1s0xd19330bcc2d1f47:0x19cc00a260e6e661!8m2!3d38.7375167!4d-9.148795!16s%2Fg%2F11cmytc398?entry=tts&g_ep=EgoyMDI1MDkxNy4wIPu8ASoASAFQAw%3D%3D&skid=0ea874e6-617a-4e43-925b-180b984aee1e", "_blank")}
+                  className="bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
                 >
                   <MapPin className="w-5 h-5" />
                   {t('mapLocation.parking.cta')}
-                </a>
+                </Button>
               </div>
             </div>
           </div>
