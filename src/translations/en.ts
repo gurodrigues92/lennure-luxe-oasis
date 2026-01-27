@@ -136,6 +136,35 @@ export const en = {
     footer: "Because time cooperates here",
     cta: "Book, participate and start the year on the right side of wellness."
   },
+  promoFeb: {
+    title: "Month of Love 💕",
+    mobileText: "February is the month of love — with someone else or with yourself.\n\n💑 Experience for Two:\nCouples Massage with +15 extra minutes\n\n💫 For singles:\nFour Hands Massage 10% off + free Extra Shower\n\n✨ Ongoing promotion:\n10% off for new clients\n\nBook your experience.",
+    desktopTitle: "February is the month of love",
+    desktopText: "Throughout February, we've prepared special experiences to celebrate Valentine's Month in every way.",
+    sections: {
+      couples: {
+        title: "💑 Experience for Two",
+        text: "When booking a Couples Massage, enjoy +15 extra minutes, allowing the experience to be lived without rush, with deeper connection and presence."
+      },
+      singles: {
+        title: "💫 For singles (and self-love lovers)",
+        text: "Throughout February, the Four Hands Massage offers 10% off and includes a complimentary Extra Shower, valid for new and returning clients."
+      },
+      ongoing: {
+        title: "✨ Ongoing promotion",
+        text: "New clients continue to enjoy 10% off their first experience."
+      },
+      extras: {
+        title: "➕ Available extras",
+        items: [
+          "Extra Shower — performed at the beginning of the experience, before the massage, to create greater involvement and connection",
+          "Hot Stones — ideal for deeper, more intense relaxation"
+        ]
+      }
+    },
+    footer: "Book your experience and personalize your moment.",
+    cta: "Because true luxury is found in the details."
+  },
   mapLocation: {
     title: "Come Visit Us",
     location: "Location",

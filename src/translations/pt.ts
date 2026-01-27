@@ -136,6 +136,35 @@ export const pt = {
     footer: "Porque o relógio aqui colabora",
     cta: "Agende, participe e comece o ano do lado certo do bem-estar."
   },
+  promoFeb: {
+    title: "Mês do Amor 💕",
+    mobileText: "Fevereiro é o mês do amor — a dois ou consigo mesmo.\n\n💑 Experiência a Dois:\nMassagem Casal com +15 minutos extra\n\n💫 Para solteiros:\nMassagem a Quatro Mãos com 10% desconto + Extra Shower grátis\n\n✨ Promoção contínua:\n10% desconto para novos clientes\n\nAgende a sua experiência.",
+    desktopTitle: "Fevereiro é o mês do amor",
+    desktopText: "Durante todo o mês de fevereiro, preparámos experiências especiais para celebrar o Dia dos Namorados de todas as formas.",
+    sections: {
+      couples: {
+        title: "💑 Experiência a Dois",
+        text: "Ao agendar a Massagem Casal, oferecemos +15 minutos extra, para um momento vivido sem pressa, com mais conexão e presença."
+      },
+      singles: {
+        title: "💫 Para solteiros (e amantes do amor-próprio)",
+        text: "Durante fevereiro, a Massagem a Quatro Mãos tem 10% de desconto e inclui Extra Shower gratuito, válido para clientes novos e clientes antigos."
+      },
+      ongoing: {
+        title: "✨ Promoção contínua",
+        text: "Clientes novos continuam a usufruir de 10% de desconto na primeira experiência."
+      },
+      extras: {
+        title: "➕ Extras disponíveis",
+        items: [
+          "Extra Shower — realizado no início da experiência, antes da massagem, para criar maior envolvimento e conexão com o cliente",
+          "Pedras Quentes — ideais para um relaxamento mais profundo"
+        ]
+      }
+    },
+    footer: "Agende a sua experiência e personalize o seu momento.",
+    cta: "Porque o verdadeiro luxo está nos detalhes."
+  },
   mapLocation: {
     title: "Venha conhecer-nos",
     location: "Localização",
