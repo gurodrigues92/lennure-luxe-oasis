@@ -78,7 +78,7 @@ const Services = () => {
                 const path = language === 'en' ? '/en/massagens' : '/massagens';
                 window.open(`${baseUrl}${path}`, "_blank");
               }}
-              className="min-w-[250px] group"
+              className="min-w-[250px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm group"
             >
               {t('services.cta')}
               <svg 

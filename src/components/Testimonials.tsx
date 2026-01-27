@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { 
   Carousel, 
   CarouselContent, 
@@ -138,15 +139,15 @@ const Testimonials = () => {
 
           {/* Google Reviews Button */}
           <div className="text-center mt-12 animate-fade-in">
-            <a
-              href="https://share.google/xG5SjK3YasJRDNyzt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-dourado via-dourado to-dourado/90 hover:from-dourado/90 hover:to-dourado text-white rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
+            <Button 
+              variant="goldOutline"
+              size="lg"
+              onClick={() => window.open("https://share.google/xG5SjK3YasJRDNyzt", "_blank")}
+              className="bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
             >
-              <Star className="w-5 h-5 fill-white" />
-              <span>{t('testimonials.cta')}</span>
-            </a>
+              <Star className="w-5 h-5" />
+              {t('testimonials.cta')}
+            </Button>
           </div>
         </div>
       </div>
