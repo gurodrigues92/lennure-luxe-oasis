@@ -86,7 +86,7 @@ const Hero = () => {
           </div>
 
           {/* Main CTA - Below Therapist Buttons */}
-          <div className="pt-8">
+          <div className="pt-8 flex justify-center">
             <GradientButton 
               variant="gold"
               onClick={handleWhatsAppClick}
@@ -99,7 +99,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-grafite/20 flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-grafite/40 rounded-full"></div>
         </div>
