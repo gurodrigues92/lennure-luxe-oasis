@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { GradientButton } from "@/components/ui/gradient-button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Maximize2 } from "lucide-react";
-import { trackWhatsAppClick } from "@/lib/analytics";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Space = () => {
@@ -30,14 +27,6 @@ const Space = () => {
       description: t('space.bathroomDesc')
     }
   ];
-  
-  const handleWhatsAppClick = () => {
-    trackWhatsAppClick('space_section', t('space.cta'));
-    setTimeout(() => {
-      const message = t('whatsapp.message');
-      window.open(`https://wa.me/351912847526?text=${encodeURIComponent(message)}`, "_blank");
-    }, 300);
-  };
 
   return (
     <section className="py-24 bg-background">
@@ -105,19 +94,6 @@ const Space = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Visit CTA */}
-          <div className="flex flex-col items-center mt-16">
-            <div className="text-center space-y-4 max-w-md">
-              <GradientButton 
-                variant="gold"
-                className="min-w-[250px] text-lg px-10 py-4"
-                onClick={handleWhatsAppClick}
-              >
-                {t('space.cta')}
-              </GradientButton>
-            </div>
           </div>
         </div>
       </div>

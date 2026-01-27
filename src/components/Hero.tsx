@@ -50,6 +50,42 @@ const Hero = () => {
             {t('hero.description')}
           </p>
 
+          {/* Therapists Section */}
+          <div className="pt-6">
+            <h3 className="font-cormorant text-xl md:text-2xl font-light text-gold mb-4">
+              {t('hero.therapistsTitle')}
+            </h3>
+            
+            {/* Therapist Buttons - IMPROVED VISIBILITY */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button 
+                variant="goldOutline"
+                size="lg"
+                onClick={() => {
+                  const baseUrl = "https://www.lennureluxspa.com";
+                  const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
+                  window.open(`${baseUrl}${path}`, "_blank");
+                }}
+                className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+              >
+                {t('differentials.female')}
+              </Button>
+              <Button 
+                variant="goldOutline"
+                size="lg"
+                onClick={() => {
+                  const baseUrl = "https://www.lennureluxspa.com";
+                  const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
+                  window.open(`${baseUrl}${path}`, "_blank");
+                }}
+                className="min-w-[180px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+              >
+                {t('differentials.male')}
+              </Button>
+            </div>
+          </div>
+
+          {/* Main CTA - Below Therapist Buttons */}
           <div className="pt-8">
             <GradientButton 
               variant="gold"
@@ -58,34 +94,6 @@ const Hero = () => {
             >
               {t('hero.cta')}
             </GradientButton>
-          </div>
-
-          {/* Secondary Therapist Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-            <Button 
-              variant="goldOutline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="min-w-[180px]"
-            >
-              {t('differentials.female')}
-            </Button>
-            <Button 
-              variant="goldOutline"
-              size="lg"
-              onClick={() => {
-                const baseUrl = "https://www.lennureluxspa.com";
-                const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
-                window.open(`${baseUrl}${path}`, "_blank");
-              }}
-              className="min-w-[180px]"
-            >
-              {t('differentials.male')}
-            </Button>
           </div>
         </div>
       </div>

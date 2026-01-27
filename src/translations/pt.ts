@@ -9,7 +9,8 @@ export const pt = {
     title: "Bem-estar e experiência sensorial",
     subtitle: "no coração de Lisboa",
     description: "Gabinetes privativos, atendimento personalizado e ambiente silencioso — um refúgio de equilíbrio e conforto onde cada detalhe é pensado para si.",
-    cta: "Marcar Sessão Agora"
+    cta: "Marcar Sessão Agora",
+    therapistsTitle: "Conheça nossos terapeutas"
   },
   about: {
     title: "Um refúgio de bem-estar no centro de Lisboa",
