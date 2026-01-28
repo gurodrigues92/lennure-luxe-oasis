@@ -8,7 +8,7 @@ const VideoTour = () => {
       <div className="container max-w-5xl mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-10">
-          <h2 className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light text-white">
+          <h2 className="text-4xl md:text-5xl font-cormorant font-bold text-cream drop-shadow-sm">
             {t('videoTour.title')}
           </h2>
         </div>

@@ -91,6 +91,40 @@ const Services = () => {
               </svg>
             </Button>
           </div>
+
+          {/* Therapists Section */}
+          <div className="text-center relative z-10 mt-16 animate-fade-in" style={{ animationDelay: '500ms' }}>
+            <h3 className="text-4xl md:text-5xl font-cormorant font-bold title-gold-gradient mb-8">
+              {t('hero.therapistsTitle')}
+            </h3>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                variant="goldOutline"
+                size="lg"
+                onClick={() => {
+                  const baseUrl = "https://www.lennureluxspa.com";
+                  const path = language === 'en' ? '/en/terapeutas-femininas' : '/terapeutas-femininas';
+                  window.open(`${baseUrl}${path}`, "_blank");
+                }}
+                className="min-w-[200px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+              >
+                {t('differentials.female')}
+              </Button>
+              <Button 
+                variant="goldOutline"
+                size="lg"
+                onClick={() => {
+                  const baseUrl = "https://www.lennureluxspa.com";
+                  const path = language === 'en' ? '/en/terapeutas-masculinos' : '/terapeutas-masculinos';
+                  window.open(`${baseUrl}${path}`, "_blank");
+                }}
+                className="min-w-[200px] bg-gold/20 hover:bg-gold hover:text-white border-2 border-gold shadow-sm"
+              >
+                {t('differentials.male')}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
