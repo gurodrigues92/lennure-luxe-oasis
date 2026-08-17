@@ -11,7 +11,7 @@ const About = () => {
           <div className="relative animate-fade-in">
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
               <img 
-                src="https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366196/Refugio_3_ynxljb.jpg" 
+                src="https://cdn.altavance.media/dkobjk4qi/image/upload/v1760366196/Refugio_3_ynxljb.jpg" 
                 alt="Interior do Lennure Lux Spa"
                 className="w-full h-full object-cover hover:scale-105 transition-elegant"
                 loading="lazy"

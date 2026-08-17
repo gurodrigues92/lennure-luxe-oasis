@@ -29,7 +29,7 @@ const Hero = () => {
         {/* Logo */}
         <div className="flex justify-center mb-12 animate-fade-in">
           <img 
-            src="https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032673/logo-semfundo_snsezj.png" 
+            src="https://cdn.altavance.media/dkobjk4qi/image/upload/v1760032673/logo-semfundo_snsezj.png" 
             alt="Lennure Lux Spa" 
             className="h-24 md:h-32 w-auto"
           />

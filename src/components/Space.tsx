@@ -8,22 +8,22 @@ const Space = () => {
   const spaces = [
     {
       name: t('space.cabinet'),
-      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/gabinete_owiwzo.jpg",
+      image: "https://cdn.altavance.media/dkobjk4qi/image/upload/v1760366130/gabinete_owiwzo.jpg",
       description: t('space.cabinetDesc')
     },
     {
       name: t('space.waiting'),
-      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760433848/Salade_Espera_1_trln50.jpg",
+      image: "https://cdn.altavance.media/dkobjk4qi/image/upload/v1760433848/Salade_Espera_1_trln50.jpg",
       description: t('space.waitingDesc')
     },
     {
       name: t('space.reception'),
-      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/recec%CC%A7a%CC%83o_sf6cf5.jpg",
+      image: "https://cdn.altavance.media/dkobjk4qi/image/upload/v1760366130/recec%CC%A7a%CC%83o_sf6cf5.jpg",
       description: t('space.receptionDesc')
     },
     {
       name: t('space.bathroom'),
-      image: "https://res.cloudinary.com/dkobjk4qi/image/upload/v1760366130/casa_de_banho_g5huse.jpg",
+      image: "https://cdn.altavance.media/dkobjk4qi/image/upload/v1760366130/casa_de_banho_g5huse.jpg",
       description: t('space.bathroomDesc')
     }
   ];

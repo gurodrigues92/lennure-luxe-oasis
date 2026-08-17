@@ -25,7 +25,7 @@ const VideoTour = () => {
               controls
             >
               <source 
-                src="https://res.cloudinary.com/dkobjk4qi/video/upload/v1769090810/video-luxure_1_yty9jo.mp4" 
+                src="https://cdn.altavance.media/dkobjk4qi/video/upload/v1769090810/video-luxure_1_yty9jo.mp4" 
                 type="video/mp4" 
               />
               Your browser does not support the video tag.

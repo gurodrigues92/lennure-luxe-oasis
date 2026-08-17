@@ -12,7 +12,7 @@ const Footer = () => {
             {/* Logo & Description */}
             <div className="space-y-4">
               <img 
-                src="https://res.cloudinary.com/dkobjk4qi/image/upload/v1760032673/logo-semfundo_snsezj.png" 
+                src="https://cdn.altavance.media/dkobjk4qi/image/upload/v1760032673/logo-semfundo_snsezj.png" 
                 alt="Lennure Lux Spa" 
                 className="h-16 w-auto brightness-0 invert"
               />
